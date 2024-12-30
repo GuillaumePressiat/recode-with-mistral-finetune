@@ -1,6 +1,6 @@
 # Mistral-finetune
 
-<a target="_blank" href="https://colab.research.google.com/github/mistralai/mistral-finetune/blob/main/tutorials/mistral_finetune_7b.ipynb">
+<a target="_blank" href="https://github.com/24p11/recode-with-mistral-finetune/blob/main/tutorials/mistral_finetune_7b.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
