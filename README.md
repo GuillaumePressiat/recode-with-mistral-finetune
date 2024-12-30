@@ -8,30 +8,17 @@
 `mistral-finetune` is a light-weight codebase that enables memory-efficient and performant finetuning of Mistral's models.
 It is based on [LoRA](https://arxiv.org/abs/2106.09685), a training paradigm where most weights are frozen and only 1-2% of additional weights in the form of low-rank matrix perturbations are trained. 
 
-For maximum efficiency it is recommended to use an A100 or H100 GPU. The codebase is optimized 
-for multi-GPU-single-node training setups, but for smaller models, such as the 7B a single GPU suffices.
+This repo is a fork of the original `mistral-finetune` ](https://arxiv.org/abs/2106.09685) adapted to the training of models dedicated to ICD-10 coding from clinical notes.
 
-> **Note**
-> 
-> - The goal of this repository is to provide a simple, guided entrypoint to finetune Mistral models.
-> As such, it is fairly opinionated (especially around data formatting) and does not aim at being exhaustive
-> across multiple model architectures or hardware types.
-> For more generic approaches, you can check out some other great projects like 
-> [torchtune](https://pytorch.org/torchtune/stable/overview.html).
+The purpurse of this fork is to help information medical teams to finetune Mistral model on the ICD-10 coding task (in french) with so called annotated data :
+- data = clinical notes (1 note or the concatenation of all the notes available for the patient in EMR). The restriction is that the model can only take a fixed number of token as entry.
+- annotation = ICD-10 codes of the PMSI resume. 2 formats are possible
+  * when using classification : lits of code (ex [C509, I10,...])
+  * when using generative model : definition of the code (code) (ex : Hypertention artérielle primitive (I10)).
 
-
-## News
-
-- **13.08.2024**: [Mistral Large v2](https://mistral.ai/news/mistral-large-2407/) is now compatible with `mistral-finetune`!
-  - 1. Download the 123B Instruct [here](##model-download) and set `model_id_or_path` to the downloaded checkpoint dir.
-  - 2. Fine-tuning Mistral-Large v2 requires significantly more memory due to a larger model size. For now set `seq_len` to <= 8192
-  - 3. It is recommended to use a lower learning rate as compared to other models, *e.g.* lr=1e-6 should work well for most cases.
-
-- **19.07.2024**: [Mistral Nemo](https://mistral.ai/news/mistral-nemo/) is now compatible with `mistral-finetune`! 
-  - 1. Download the 12B Base or Instruct [here](##model-download) and set `model_id_or_path` to the downloaded checkpoint dir.
-  - 2. Run `pip install --upgrade mistral-common` to have a version that supports the Tekkenizer (`>=1.3.1`).
-  - 3. Fine-tuning Mistral-Nemo requires currently much more memory due to a larger vocabulary size which spikes the peak memory requirement of the CE loss (we'll soon add an improved CE loss here). For now set `seq_len` to <= 16384
-  - 4. It is recommended to use the same hyperparameters as for the 7B v3.
+For this finetuning a generative model we can use 2 paradigm :
+- Next token prediction : you give the model a long text, and the task is to prodict next word. For ICD-10 coding, we train the model will on a text which is the concatenation of the note and ICD-10 coding. This task will princilally help the model to learn contextualised reprensentations of medical words of the clinical note and of the of ICD-10 definitions and codes/ 
+- Instruction prediction : the model here is seen as an assistant. You give to the assistant a context (medical ICD-10 coding from clinical notes) and a question (what codes will you choose for the following clinical note), and the assistant will give a correct answer (the ICD-10 codes).
 
 ## Installation
 
@@ -39,7 +26,7 @@ To get started with Mistral LoRA fine-tuning, follow these steps:
 
 1. Clone this repository:
 ```
-cd $HOME && git clone https://github.com/mistralai/mistral-finetune.git
+cd $HOME && git clone https://github.com/24p11/recode-with-mistral-finetune.git
 ```
 
 2. Install all required dependencies:
@@ -50,21 +37,9 @@ pip install -r requirements.txt
 
 ## Model download
 
-We recommend fine-tuning one of the official Mistral models which you can download here:
-
-| Model          | Link                                                                                                    | Checksum                          |
-|----------------|---------------------------------------------------------------------------------------------------------|-----------------------------------|
-| 7B Base V3       | [7B Base](https://models.mistralcdn.com/mistral-7b-v0-3/mistral-7B-v0.3.tar)                            | `0663b293810d7571dad25dae2f2a5806`|
-| 7B Instruct v3 | [7B Instruct v3](https://models.mistralcdn.com/mistral-7b-v0-3/mistral-7B-Instruct-v0.3.tar)             | `80b71fcb6416085bcb4efad86dfb4d52`|
-| 8x7B Base V1   | [8x7B Base](https://huggingface.co/mistralai/Mixtral-8x7B-v0.1)                                                                        | (HF link)                                |
-| 8x7B Instruct V1 | [8x7B Instruct](https://models.mistralcdn.com/mixtral-8x7b-v0-1/Mixtral-8x7B-v0.1-Instruct.tar) | `8e2d3930145dc43d3084396f49d38a3f` |
-| 8x22 Instruct V3 | [8x22 Instruct](https://models.mistralcdn.com/mixtral-8x22b-v0-3/mixtral-8x22B-Instruct-v0.3.tar)        | `471a02a6902706a2f1e44a693813855b`|
-| 8x22B Base V3  | [8x22B Base](https://models.mistralcdn.com/mixtral-8x22b-v0-3/mixtral-8x22B-v0.3.tar)                        | `a2fa75117174f87d1197e3a4eb50371a`|
-| 12B Instruct | [12B Instruct (Mistral-Nemo)](https://models.mistralcdn.com/mistral-nemo-2407/mistral-nemo-instruct-2407.tar) | `296fbdf911cb88e6f0be74cd04827fe7` |
-| 12B Base | [12 Base (Mistral-Nemo)](https://models.mistralcdn.com/mistral-nemo-2407/mistral-nemo-base-2407.tar) | `c5d079ac4b55fc1ae35f51f0a3c0eb83` |
-| Mistral Large 2 | [123B Instruct (Large v2)](https://models.mistralcdn.com/mistral-large-2407/mistral-large-instruct-2407.tar) | `fc602155f9e39151fba81fcaab2fa7c4` |
-
-**Important Notice**: For 8x7B Base V1 and 8x7B Instruct V1, it is necessary to use our v3 tokenizer and extend the vocabulary size to 32768 prior to fine-tuning. For detailed instructions on this process, please refer to the ["Model extension"](https://github.com/mistralai/mistral-finetune?tab=readme-ov-file#model-extension) section. 
+We recommend fine-tuning one of the 7B Instruct v3 Mistral models which you can download from the official Mistral repo :
+7B Instruct v3 | [7B Instruct v3](https://models.mistralcdn.com/mistral-7b-v0-3/mistral-7B-Instruct-v0.3.tar) 
+or from hugginface see 
 
 E.g., to download the 7B-base model you can run the following command:
 ```sh
@@ -96,149 +71,92 @@ You can build two types of data files:
 Pretrain data corresponds to plain text data stored in the `"text"` key. E.g:
 
 ```jsonl
-{"text": "Text contained in document n°1"}
-{"text": "Text contained in document n°2"}
+{"text": "Text contained in clinical note n°1. ICD-10 codes : definition 1 (code 1),..."}
+{"text": "Text contained in clinical note n°2. ICD-10 codes : definition 1 (code 1),..."}
 ```
 
+In the pretrain paradigm models are funetune with the next token prediction task.
 ### _Instruct_:
 
 Currently two different types of instruction following data are supported:
 
-- _Instruct_: conversational data stored in the `"messages"` key in the form of a list. Each list item is a dictionary containing the `"content"` and `"role"` keys. `"role"` is a string being one of "user", "assistant" or "system". The loss will only be computed if "role" == "assistant". E.g.:
+- _Instruct_: In the conversational data stored in the `"messages"` key in the form of a list. Each list item is a dictionary containing the `"content"` and `"role"` keys. `"role"` is a string being one of 
+  * "system" :  task contextualization
+  * "user" : question the assistant will answer
+  * "assistant" : expected result from the assistant
+The loss will only be computed if "role" == "assistant". 
 
+For ICD-10 coding in French we have adopted the following conventions :
+- system : Vous êtes un modèle de langage en française spécialisé dans le codage des diagnostics selon la classification internationale des maladies version 10 (CIM-10) pour les résumés standardisés de sortie du programme de médicalisation des systèmes d'information français (PMSI). A partir des comptes rendus d'hospitalisation vous donnerez les codes diagnostics CIM-10 que l'on peut retenir pour le séjours en distiguant diagnostic principal, diagnostic relié et diagnostics associés.
+- user : Générez le codage CIM-10 du résumé strandisé de sortie PMSI à partir du compte rendu d'hospitalisation suivant : texte du compte rendu
+- assistant : Codes CIM 10 retenus pour le résumé strandisé de sortie PMSI : diagnostic principal : définition du code (code), diagnistic relié : aucun, diagnostic associé : définition diagnostic 1 (code 1),...
 ```jsonl
 {
   "messages": [
-    {
-      "role": "user",
-      "content": "User interaction n°1 contained in document n°1"
-    },
-    {
-      "role": "assistant",
-      "content": "Bot interaction n°1 contained in document n°1"
-    },
-    {
-      "role": "user",
-      "content": "User interaction n°2 contained in document n°1"
-    },
-    {
-      "role": "assistant",
-      "content": "Bot interaction n°2 contained in document n°1"
-    }
-  ]
-}
-{
-  "messages": [
-    {
-      "role": "user",
-      "content": "User interaction n°1 contained in document n°2"
-    },
-    {
-      "role": "assistant",
-      "content": "Bot interaction n°1 contained in document n°2"
-    },
-    {
-      "role": "user",
-      "content": "User interaction n°2 contained in document n°2"
-    },
-    {
-      "role": "assistant",
-      "content": "Bot interaction n°2 contained in document n°2",
-      "weight": 0,  # don't train on n°2
-    },
-    {
-      "role": "user",
-      "content": "User interaction n°3 contained in document n°2"
-    },
-    {
-      "role": "assistant",
-      "content": "Bot interaction n°3 contained in document n°2"
-    }
-  ]
-}
-```
-
-- _Function calling_: conversational data stored in the `"messages"` key in the form of a list. Each list item is a dictionary containing the `"role"` and `"content"` or `"tool_calls"` keys. `"role"` is a string being one of "user", "assistant", "system", or "tool". The loss will only be computed if "role" == "assistant".
-
-**Note**: In function calling the `"id"` of `"tool_calls"` and the `"tool_call_id"` are randomly generated strings of exactly 9 chars. We recommend to generate this automatically 
-in a data preparation script as is done [here](https://github.com/mistralai/mistral-finetune/blob/208b25c0f7299bb78d06cea25b82adee03834319/utils/reformat_data_glaive.py#L74).
-
-E.g.:
-
-```jsonl
-{
-  "messages": [
-    {
+     {
       "role": "system",
-      "content": "You are a helpful assistant who has access to the following functions to help the user, you can use the functions if needed"
+      "content": "Vous êtes un modèle de langage en française spécialisé dans le codage des diagnostics selon la classification internationale des maladies version 10 (CIM-10) pour les résumés standardisés de sortie du programme de médicalisation des systèmes d'information français (PMSI). A partir des comptes rendus d'hospitalisation vous donnerez les codes diagnostics CIM-10 que l'on peut retenir pour le séjours en distiguant diagnostic principal, diagnostic relié et diagnostics associés."
     },
     {
       "role": "user",
-      "content": "Can you help me generate an anagram of the word \"listen\"?"
+      "content": "Générez le codage CIM-10 du résumé strandisé de sortie PMSI à partir du compte rendu d'hospitalisation suivant : texte du compte rendu n°1"
     },
     {
       "role": "assistant",
-      "tool_calls": [
-        {
-          "id": "TX92Jm8Zi",
-          "type": "function",
-          "function": {
-            "name": "generate_anagram",
-            "arguments": "{\"word\": \"listen\"}"
-          }
-        }
-      ]
-    },
-    {
-      "role": "tool",
-      "content": "{\"anagram\": \"silent\"}",
-      "tool_call_id": "TX92Jm8Zi"
-    },
-    {
-      "role": "assistant",
-      "content": "The anagram of the word \"listen\" is \"silent\"."
-    },
-    {
-      "role": "user",
-      "content": "That's amazing! Can you generate an anagram for the word \"race\"?"
-    },
-    {
-      "role": "assistant",
-      "tool_calls": [
-        {
-          "id": "3XhQnxLsT",
-          "type": "function",
-          "function": {
-            "name": "generate_anagram",
-            "arguments": "{\"word\": \"race\"}"
-          }
-        }
-      ]
+      "content": "Codes CIM 10 retenus pour le résumé strandisé de sortie PMSI : diagnostic principal : définition du code (code), diagnistic relié : aucun, diagnostic associé : définition diagnostic 1 (code 1),..."
     }
-  ],
-  "tools": [
+  ]
+}
+{
+  "messages": [
+     {
+      "role": "system",
+      "content": "Vous êtes un modèle de langage en française spécialisé dans le codage des diagnostics selon la classification internationale des maladies version 10 (CIM-10) pour les résumés standardisés de sortie du programme de médicalisation des systèmes d'information français (PMSI). A partir des comptes rendus d'hospitalisation vous donnerez les codes diagnostics CIM-10 que l'on peut retenir pour le séjours en distiguant diagnostic principal, diagnostic relié et diagnostics associés."
+    },
     {
-      "type": "function",
-      "function": {
-        "name": "generate_anagram",
-        "description": "Generate an anagram of a given word",
-        "parameters": {
-          "type": "object",
-          "properties": {
-            "word": {
-              "type": "string",
-              "description": "The word to generate an anagram of"
-            }
-          },
-          "required": [
-            "word"
-          ]
-        }
-      }
+      "role": "user",
+      "content": "Générez le codage CIM-10 du résumé strandisé de sortie PMSI à partir du compte rendu d'hospitalisation suivant : texte du compte rendu n°2"
+    },
+    {
+      "role": "assistant",
+      "content": "Codes CIM 10 retenus pour le résumé strandisé de sortie PMSI : diagnostic principal : définition du code (code), diagnistic relié : aucun, diagnostic associé : définition diagnostic 1 (code 1),..."
     }
   ]
 }
 ```
+
+The notebook  [prepare_data_for_generative_finetuning](tutorials/prepare_data_for_generative_finetuning.ipynb) will show how to prepare data step by step. 
+
+## Customizing training configuration
+
+All the parameters of the training procedure are stored in yaml config file (see example/7B.yaml). Modify your training yaml to include the ultrachat dataset and verify the yaml
+
+The example `mistral-finetune/examples/7B` defines reasonable parameters for learning rate, weight decay, etc... but you are advised to 
+customize these settings for your use case.
+
+Generally, a training configuration should fill the following parameters:
+
+- `model_id_or_path` defines the model to start training from. This can be a path to a pre-trained model or a local model directory.
+- `run_dir` defines the directory where training checkpoints and metrics are stored.
+- `seq_len` defines the sequence length for training. This is the maximum length of input sequences the model will process. Samples are packed to reach a length of `seq_len` for maximum training efficiency.
+- `batch_size` defines the number of training examples used per GPU. **Note**: The overall effective batch_size (in tokens) across all GPUs equals `num_gpus` x `batch_size` x `seq_len`.
+- `max_steps` defines the maximum number of training steps. This is the total number of iterations the training process will run. It can be adjusted based on the specific needs of your training scenario. Total number of tokens seen during training is `max_steps` x `num_gpus` x `batch_size` x `seq_len`.
+- `optim.lr` defines the learning rate. This is the initial learning rate for the optimizer.
+- `optim.weight_decay` defines weight decay. Weight decay is a regularization technique used to prevent overfitting by penalizing large weights. We recommend leaving it at 0.1.
+- `optim.pct_start` defines the percentage of the total training steps used for the learning rate warm-up phase before it starts to decrease. It corresponds to pct_start of PyTorch's OneCycleLR.
+- `lora.rank` defines the size of the LoRA (Low-Rank Adaptation) adapters. We recommend 64 or less, which adjusts the rank of the low-rank decomposition used in LoRA.
+- `seed` defines the random seed for initialization and data shuffling/sampling. Setting a seed ensures reproducibility of results.
+- `log_freq` defines the logging frequency. This specifies how often (in steps) to log training metrics.
+- `data.instruct_data` is the path to the instruction data used for training. This field has to be filled with one or multiple data sources in the format as explained above. Each data source should either be a path to a jsonl file or a path to a directory containing jsonl files followed by a weighting to define the importance of this dataset: `<path/to/data_source>:<weight>`. E.g.: `data.instruct_data: "/path/to/data1.jsonl:5.,/path/to/data2.jsonl:1.,/path/to/dir_of_jsonls:1."`
+- `data.data` is an optional path to additional pretraining data in the format as explained above. Note that this field can be left blank.
+- `data.eval_instruct_data` is an optional path to evaluation instruction data to run cross-validation at every `eval_freq` steps. Cross-validation metrics are displayed as `loss` and `perplexity`.
+- `eval_freq` defines how often (in steps) to evaluate the model. This specifies the interval at which the model is evaluated on the validation set.
+- `no_eval` is a flag to enable or disable intermediate evaluation. Setting it to False enables periodic evaluation during training.
+- `ckpt_freq` defines how often (in steps) to save checkpoints. This specifies the interval at which the model's state is saved.
+- `save_adapters` defines whether to only save the trained LoRA checkpoints or whether the trained LoRA should directly be merged into the base model and saved. **Note**: When setting `save_adapters=False` make sure that you have enough CPU and GPU memory to save the full model on a single process (this is usually only possible for the 7B model).
+- `wandb.key` is used to pass your Weights & Biases (wandb) API key for logging. This allows you to log training metrics to the wandb dashboard.
+- `wandb.project` defines the wandb project name. This is where the training run will be logged in the wandb interface.
+
 
 ## Verify dataset
 
@@ -246,82 +164,6 @@ Before starting a training run you should verify that your dataset is correctly 
 estimation of the training time. You can do so by using the [./utils/validate_data](https://github.com/mistralai/mistral-finetune/blob/main/utils/validate_data.py) script.
 
 Note that this step is crucial to ensure that the data is correctly formatted.
-
-### Instruction following
-
-Let's go over a simple example to train a model in instruction following:
-
-- 1. **Load a chunk of [Ultachat_200k](https://huggingface.co/datasets/HuggingFaceH4/ultrachat_200k)**
-
-Create the data folder and navigate to the folder.
-```sh
-cd $HOME && mkdir -p data && cd $HOME/data
-```
-
-Load the data into a Pandas Dataframe. 
-
-**Note**: Make sure to have pandas and pyarrow installed (`pip install pandas pyarrow`).
-
-```py
-import pandas as pd
-
-df = pd.read_parquet('https://huggingface.co/datasets/HuggingFaceH4/ultrachat_200k/resolve/main/data/test_gen-00000-of-00001-3d4cd8309148a71f.parquet')
-```
-- 2. Split into train and eval
-
-```py
-df_train=df.sample(frac=0.95,random_state=200)
-df_eval=df.drop(df_train.index)
-```
-
-- 3. Save data to jsonl
-
-```py
-df_train.to_json("ultrachat_chunk_train.jsonl", orient="records", lines=True)
-df_eval.to_json("ultrachat_chunk_eval.jsonl", orient="records", lines=True)
-```
-
-- 4. Modify your training yaml to include the ultrachat dataset and verify the yaml
-
-Modify [example/7B.yaml](https://github.com/mistralai/mistral-finetune/blob/main/example/7B.yaml) to include the absolute path to `$HOME/data/ultrachat_chunk_train.jsonl` as well as a dataset mixing weight for training and `$HOME/data/ultrachat_chunk_eval.jsonl` for eval, *e.g.*
-
-```
-data:
-  instruct_data: "/Users/johndoe/data/ultrachat_chunk_train.jsonl"
-  eval_instruct_data: "/Users/johndoe/data/ultrachat_chunk_eval.jsonl"
-```
-
-Now you can verify your training yaml to make sure the data is correctly formatted and to get an estimate of your training time.
-
-```
-cd $HOME/mistral-finetune
-python -m utils.validate_data --train_yaml example/7B.yaml
-```
-
-Upon completion you should see an error report with many of the following errors:
-
-```
-The data in line 1412 of dataset /Users/johndoe/data/ultrachat_chunk_eval.jsonl is incorrectly formatted. Expected last role to be one of: [assistant] but got user
-The data in line 1413 of dataset /Users/johndoe/data/ultrachat_chunk_eval.jsonl is incorrectly formatted. Expected last role to be one of: [assistant] but got user
-The data in line 1414 of dataset /Users/johndoe/data/ultrachat_chunk_eval.jsonl is incorrectly formatted. Expected last role to be one of: [assistant] but got user
-The data in line 1415 of dataset /Users/johndoe/data/ultrachat_chunk_eval.jsonl is incorrectly formatted. Expected last role to be one of: [assistant] but got user
-```
-
-Many conversations seem to end with the 'user' role which is unnecessary as we only train on 'assistant' messages and thus would unnecessarily process data.
-
-You can make use of [./utils/reformat_data.py](https://github.com/mistralai/mistral-finetune/blob/main/utils/reformat_data.py) to correct the data:
-
-```
-cd $HOME/mistral-finetune
-python -m utils.reformat_data $HOME/data/ultrachat_chunk_train.jsonl
-python -m utils.reformat_data $HOME/data/ultrachat_chunk_eval.jsonl
-```
-
-You should see that a couple of samples will be skipped.
-
-- 5. Potentially change number of training steps
-
-Upon correction of the dataset, run the script again
 
 ```
 cd $HOME/mistral-finetune
@@ -356,73 +198,6 @@ Train States
 Having `max_steps` set to 500 would lead to iterating through the dataset roughly 5 times which is reasonable, but might 
 be a bit too much. A recommended setting is shown below which would only take 30min on a 8xH100 cluster.
 
-### Function calling
-
-Next let's go over a more advanced use case to fine-tune a model on function calling.
-Function calling requires the data to be in the format as [explained above](#instruct). Let's go over an example.
-
-- 1. **Load a chat-formatted version of the [Glaive function calling dataset](https://huggingface.co/datasets/Locutusque/function-calling-chatml)**
-
-Create the data folder and navigate to the folder.
-```sh
-cd $HOME && mkdir -p data && cd $HOME/data
-```
-
-Load the data into a Pandas Dataframe.
-
-**Note**: Make sure to have pandas and pyarrow installed (`pip install pandas pyarrow`).
-
-```py
-import pandas as pd
-
-df = pd.read_parquet('https://huggingface.co/datasets/Locutusque/function-calling-chatml/resolve/main/data/train-00000-of-00001-f0b56c6983b4a78f.parquet')
-```
-- 2. Split into train and eval
-
-```py
-df_train=df.sample(frac=0.95,random_state=200)
-df_eval=df.drop(df_train.index)
-```
-
-- 3. Save data to jsonl
-
-```py
-df_train.to_json("glaive_train.jsonl", orient="records", lines=True)
-df_eval.to_json("glaive_eval.jsonl", orient="records", lines=True)
-```
-
-- 4. Reformat dataset
-
-As one can see the dataset does not follow the required function calling format, so it will need to be reformatted. Among other things `"from"` should be renamed to `"user"` and superfluous `"\n"` characters should be removed.
-For this dataset you can make use of [`./utils/reformat_data_glaive.py`](https://github.com/mistralai/mistral-finetune/blob/main/utils/reformat_data_glaive.py):
-
-```
-cd $HOME/mistral-finetune
-python -m utils.reformat_data_glaive $HOME/data/glaive_train.jsonl
-python -m utils.reformat_data_glaive $HOME/data/glaive_eval.jsonl
-```
-
-Running this command will make sure that most samples are in the correct format.
-
-**Note**: It is impossible to write reformatting scripts that work for all kinds of datasets. 
-If you have datasets that don't yet follow the required format above, you will most probably have to 
-create a reformatting script yourself (mistral-chat or chat-gpt is your best friend here!).
-
-- 5. Validate dataset
-
-You can now validate the dataset by setting `data.instruct_data` and `data.eval_instruct_data` to
-`$HOME/data/glaive_train.jsonl` and `$HOME/data/glaive_eval.jsonl` in `example/7B.yaml` respectively.
-
-The reformatted datasets still have some errors which can be removed with `--create_corrected`. For this, make sure to add
-`--create_corrected` as follows:
-
-```
-cd $HOME/mistral-finetune
-python -m utils.validate_data --train_yaml example/7B.yaml --create_corrected
-```
-
-Running this command will show a couple of errors and save two new datasets `$HOME/data/glaive_train.jsonl.corrected` and `$HOME/data/glaive_eval.jsonl.corrected`. Make sure to use these two dataset in `example/7B.yaml` and run the command again. Now the dataset should be correctly formatted!
-
 
 ## Start training
 
@@ -433,9 +208,6 @@ max_steps: 300
 run_dir: "/Users/johndoe/ultra_chat_test"
 wandb.project: ultra_chat
 ```
-
-Optionally you can also set `wandb`
-
 Save the training configuration and start training! Make sure to set `--nproc-per-node` to the number of available GPUs.
 
 ```
@@ -447,33 +219,6 @@ Training on ultra-chat should take around 30min on a 8xH100 node and the resulti
 
 Training on glaive should take around 1h on a 8xH100 node and the resulting weights should work nicely for function calling.
 
-## Customizing training configuration
-
-The example `mistral-finetune/examples/7B` defines reasonable parameters for learning rate, weight decay, etc... but you are advised to 
-customize these settings for your use case.
-
-Generally, a training configuration should fill the following parameters:
-
-- `model_id_or_path` defines the model to start training from. This can be a path to a pre-trained model or a local model directory.
-- `run_dir` defines the directory where training checkpoints and metrics are stored.
-- `seq_len` defines the sequence length for training. This is the maximum length of input sequences the model will process. Samples are packed to reach a length of `seq_len` for maximum training efficiency.
-- `batch_size` defines the number of training examples used per GPU. **Note**: The overall effective batch_size (in tokens) across all GPUs equals `num_gpus` x `batch_size` x `seq_len`.
-- `max_steps` defines the maximum number of training steps. This is the total number of iterations the training process will run. It can be adjusted based on the specific needs of your training scenario. Total number of tokens seen during training is `max_steps` x `num_gpus` x `batch_size` x `seq_len`.
-- `optim.lr` defines the learning rate. This is the initial learning rate for the optimizer.
-- `optim.weight_decay` defines weight decay. Weight decay is a regularization technique used to prevent overfitting by penalizing large weights. We recommend leaving it at 0.1.
-- `optim.pct_start` defines the percentage of the total training steps used for the learning rate warm-up phase before it starts to decrease. It corresponds to pct_start of PyTorch's OneCycleLR.
-- `lora.rank` defines the size of the LoRA (Low-Rank Adaptation) adapters. We recommend 64 or less, which adjusts the rank of the low-rank decomposition used in LoRA.
-- `seed` defines the random seed for initialization and data shuffling/sampling. Setting a seed ensures reproducibility of results.
-- `log_freq` defines the logging frequency. This specifies how often (in steps) to log training metrics.
-- `data.instruct_data` is the path to the instruction data used for training. This field has to be filled with one or multiple data sources in the format as explained above. Each data source should either be a path to a jsonl file or a path to a directory containing jsonl files followed by a weighting to define the importance of this dataset: `<path/to/data_source>:<weight>`. E.g.: `data.instruct_data: "/path/to/data1.jsonl:5.,/path/to/data2.jsonl:1.,/path/to/dir_of_jsonls:1."`
-- `data.data` is an optional path to additional pretraining data in the format as explained above. Note that this field can be left blank.
-- `data.eval_instruct_data` is an optional path to evaluation instruction data to run cross-validation at every `eval_freq` steps. Cross-validation metrics are displayed as `loss` and `perplexity`.
-- `eval_freq` defines how often (in steps) to evaluate the model. This specifies the interval at which the model is evaluated on the validation set.
-- `no_eval` is a flag to enable or disable intermediate evaluation. Setting it to False enables periodic evaluation during training.
-- `ckpt_freq` defines how often (in steps) to save checkpoints. This specifies the interval at which the model's state is saved.
-- `save_adapters` defines whether to only save the trained LoRA checkpoints or whether the trained LoRA should directly be merged into the base model and saved. **Note**: When setting `save_adapters=False` make sure that you have enough CPU and GPU memory to save the full model on a single process (this is usually only possible for the 7B model).
-- `wandb.key` is used to pass your Weights & Biases (wandb) API key for logging. This allows you to log training metrics to the wandb dashboard.
-- `wandb.project` defines the wandb project name. This is where the training run will be logged in the wandb interface.
 
 ## Inference
 
@@ -489,27 +234,6 @@ Assuming your `lora.safetensors` is saved under `$HOME/ultra_chat_test/checkpoin
 ```sh
 mistral-chat /mnt/slow/runs/patrick/mistral-finetune/7B/ --max_tokens 256 --temperature 1.0 --instruct --lora_path $HOME/ultra_chat_test/checkpoints/checkpoint_000300/consolidated/lora.safetensors
 ```
-
-## Adding Weights and Biases (wandb) Support
-
-We have added explicit support for [Weights and Biases](https://www.wandb.com/) to help you monitor and visualize your training runs. This integration allows you to log various metrics and track experiments easily.
-
-### Setting Up Weights and Biases
-
-To use Weights and Biases with `mistral-finetune`, follow these steps:
-
-1. **Install Weights and Biases:**
-
-   Make sure you have the `wandb` library installed. You can install it using pip:
-
-```sh
-   pip install wandb
-```
-### Viewing Your Logs
-
-Once the training starts, you can monitor the progress in real-time by visiting your wandb project dashboard. All metrics, including training loss, evaluation loss, learning rate, etc., will be logged and visualized.
-
-For more details on how to use wandb, visit the [Weights and Biases documentation](https://docs.wandb.ai/).
 
 ## Model extension
 

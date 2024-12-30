@@ -1,0 +1,903 @@
+visit_occurence_id,condition_status_source_value,concept_code,concept_name
+5e6f73d5427e6e6ca6be572947d25d792d760188,DP,R102,Douleur pelvienne et périnéale
+5e6f73d5427e6e6ca6be572947d25d792d760188,DAS,E8768,"Hypokaliémies, autres et sans précision"
+5e6f73d5427e6e6ca6be572947d25d792d760188,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+5e6f73d5427e6e6ca6be572947d25d792d760188,DAS,I10,Hypertension essentielle (primitive)
+5e6f73d5427e6e6ca6be572947d25d792d760188,DAS,C795,Tumeur maligne secondaire des os et de la moelle osseuse
+80b5ad207e03641ff70c892f05cd5db00c6ceb97,DP,D127,Tumeur bénigne de la jonction recto-sigmoïdienne
+80b5ad207e03641ff70c892f05cd5db00c6ceb97,DAS,E8718,"Hypoosmolarités et hyponatrémies, autres et sans précision"
+80b5ad207e03641ff70c892f05cd5db00c6ceb97,DAS,C780,Tumeur maligne secondaire du poumon
+1209349d28152cf720c8ba0ba5422ff4632be788,DP,K579,"Diverticulose de l'intestin, (siège non précisé, sans perforation ni abcès)"
+1209349d28152cf720c8ba0ba5422ff4632be788,DAS,E559,"Carence en vitamine D, sans précision"
+a69e8ed031c0fd0013bbae357c0aba03ed04d38b,DP,F1002,"Troubles mentaux et du comportement dus à une intoxication aigüe par l'alcool, avec d'autres complications médicales"
+a69e8ed031c0fd0013bbae357c0aba03ed04d38b,DAS,E43,"Malnutrition protéino-énergétique grave, sans précision"
+a69e8ed031c0fd0013bbae357c0aba03ed04d38b,DAS,R33,Rétention d'urine
+a69e8ed031c0fd0013bbae357c0aba03ed04d38b,DAS,E559,"Carence en vitamine D, sans précision"
+a69e8ed031c0fd0013bbae357c0aba03ed04d38b,DAS,C795,Tumeur maligne secondaire des os et de la moelle osseuse
+a69e8ed031c0fd0013bbae357c0aba03ed04d38b,DAS,E8768,"Hypokaliémies, autres et sans précision"
+aee2ca5cce9cf7e457c99804d3d63f22bf9fe063,DP,F1056,"Trouble psychotique mixte, dû à l'alcool"
+aee2ca5cce9cf7e457c99804d3d63f22bf9fe063,DAS,G473,Apnée du sommeil
+aee2ca5cce9cf7e457c99804d3d63f22bf9fe063,DAS,E8768,"Hypokaliémies, autres et sans précision"
+ae997b0b6e73c9bacb984d473022506cbe5db24f,DP,C798,Tumeur maligne secondaire d'autres sièges précisés
+ae997b0b6e73c9bacb984d473022506cbe5db24f,DAS,E559,"Carence en vitamine D, sans précision"
+ae997b0b6e73c9bacb984d473022506cbe5db24f,DAS,N185,"Maladie rénale chronique, stade 5"
+ae997b0b6e73c9bacb984d473022506cbe5db24f,DAS,E8768,"Hypokaliémies, autres et sans précision"
+2fcbb08d0a37f311b4e085929da7838456ccf600,DP,I5000,"Insuffisance cardiaque congestive, avec fraction d'éjection ventriculaire gauche [FEVG] supérieure ou égale à 50"
+2fcbb08d0a37f311b4e085929da7838456ccf600,DAS,N185,"Maladie rénale chronique, stade 5"
+2fcbb08d0a37f311b4e085929da7838456ccf600,DAS,E559,"Carence en vitamine D, sans précision"
+2fcbb08d0a37f311b4e085929da7838456ccf600,DAS,I255,Myocardiopathie ischémique
+2fcbb08d0a37f311b4e085929da7838456ccf600,DAS,C795,Tumeur maligne secondaire des os et de la moelle osseuse
+2fcbb08d0a37f311b4e085929da7838456ccf600,DAS,E8768,"Hypokaliémies, autres et sans précision"
+2fcbb08d0a37f311b4e085929da7838456ccf600,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+2fcbb08d0a37f311b4e085929da7838456ccf600,DAS,E8718,"Hypoosmolarités et hyponatrémies, autres et sans précision"
+ae0cf54a7710406ee0cef1fb7aabf89d92a8c1ef,DP,F1052,"Trouble psychotique avec hallucinations au premier plan, dû à l'alcool"
+ae0cf54a7710406ee0cef1fb7aabf89d92a8c1ef,DAS,I255,Myocardiopathie ischémique
+ae0cf54a7710406ee0cef1fb7aabf89d92a8c1ef,DAS,E1190,"Diabète sucré de type 2 insulinotraité, sans complication"
+ae0cf54a7710406ee0cef1fb7aabf89d92a8c1ef,DAS,I10,Hypertension essentielle (primitive)
+ae0cf54a7710406ee0cef1fb7aabf89d92a8c1ef,DAS,I482,Fibrillation auriculaire chronique [permanente]
+ae0cf54a7710406ee0cef1fb7aabf89d92a8c1ef,DAS,E8768,"Hypokaliémies, autres et sans précision"
+ae0cf54a7710406ee0cef1fb7aabf89d92a8c1ef,DAS,G473,Apnée du sommeil
+ae0cf54a7710406ee0cef1fb7aabf89d92a8c1ef,DAS,N185,"Maladie rénale chronique, stade 5"
+3940fe66aef2b916b933e47ed1b0ef265ac0e366,DP,R072,Douleur précordiale
+3940fe66aef2b916b933e47ed1b0ef265ac0e366,DAS,E8768,"Hypokaliémies, autres et sans précision"
+3940fe66aef2b916b933e47ed1b0ef265ac0e366,DAS,I10,Hypertension essentielle (primitive)
+3940fe66aef2b916b933e47ed1b0ef265ac0e366,DAS,C795,Tumeur maligne secondaire des os et de la moelle osseuse
+2102ea4751aea05570cd4b57ba765ed095462ac0,DP,F1056,"Trouble psychotique mixte, dû à l'alcool"
+2102ea4751aea05570cd4b57ba765ed095462ac0,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+2102ea4751aea05570cd4b57ba765ed095462ac0,DAS,C787,Tumeur maligne secondaire du foie et des voies biliaires intrahépatiques
+2102ea4751aea05570cd4b57ba765ed095462ac0,DAS,E559,"Carence en vitamine D, sans précision"
+655442833a273c903272b7e17dad9a4f6d6ede92,DP,D124,Tumeur bénigne du côlon descendant
+655442833a273c903272b7e17dad9a4f6d6ede92,DAS,E8718,"Hypoosmolarités et hyponatrémies, autres et sans précision"
+44dc7026f0f4bcc5732459250e58ecf8777d26a0,DR,C798,Tumeur maligne secondaire d'autres sièges précisés
+44dc7026f0f4bcc5732459250e58ecf8777d26a0,DP,Z5101,Séance de radiothérapie
+44dc7026f0f4bcc5732459250e58ecf8777d26a0,DAS,I255,Myocardiopathie ischémique
+44dc7026f0f4bcc5732459250e58ecf8777d26a0,DAS,G473,Apnée du sommeil
+44dc7026f0f4bcc5732459250e58ecf8777d26a0,DAS,I482,Fibrillation auriculaire chronique [permanente]
+44dc7026f0f4bcc5732459250e58ecf8777d26a0,DAS,C787,Tumeur maligne secondaire du foie et des voies biliaires intrahépatiques
+44dc7026f0f4bcc5732459250e58ecf8777d26a0,DAS,R410,"Désorientation, sans précision"
+44dc7026f0f4bcc5732459250e58ecf8777d26a0,DAS,E8718,"Hypoosmolarités et hyponatrémies, autres et sans précision"
+44dc7026f0f4bcc5732459250e58ecf8777d26a0,DAS,N185,"Maladie rénale chronique, stade 5"
+4cd566c46147243d49627945f6270d6c12ba7d8d,DP,C448,Tumeur maligne à localisations contiguës de la peau
+4cd566c46147243d49627945f6270d6c12ba7d8d,DAS,E559,"Carence en vitamine D, sans précision"
+4cd566c46147243d49627945f6270d6c12ba7d8d,DAS,N185,"Maladie rénale chronique, stade 5"
+ab98aa6d2157d7188b25ca9c8197dd1b26bfa1c8,DR,C189+0,Syndrome de Lynch
+ab98aa6d2157d7188b25ca9c8197dd1b26bfa1c8,DP,Z511,Séance de chimiothérapie pour tumeur
+8b2353c5a21b50f7698ddbc6f24fb3ad7ec9dd35,DP,C447,"Tumeur maligne de la peau du membre inférieur, y compris la hanche"
+8b2353c5a21b50f7698ddbc6f24fb3ad7ec9dd35,DAS,C787,Tumeur maligne secondaire du foie et des voies biliaires intrahépatiques
+8b2353c5a21b50f7698ddbc6f24fb3ad7ec9dd35,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+96df94839baa5e55af05956add809e15e00f5750,DP,F1024,"Syndrome de dépendance à l'alcool, utilisation actuelle"
+96df94839baa5e55af05956add809e15e00f5750,DAS,R410,"Désorientation, sans précision"
+96df94839baa5e55af05956add809e15e00f5750,DAS,E559,"Carence en vitamine D, sans précision"
+96df94839baa5e55af05956add809e15e00f5750,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+96df94839baa5e55af05956add809e15e00f5750,DAS,N185,"Maladie rénale chronique, stade 5"
+20d55940f30d3d40e2aae3d77cbc94d7ee9bfc76,DR,C251,Tumeur maligne du corps du pancréas
+20d55940f30d3d40e2aae3d77cbc94d7ee9bfc76,DP,Z5101,Séance de radiothérapie
+20d55940f30d3d40e2aae3d77cbc94d7ee9bfc76,DAS,E8768,"Hypokaliémies, autres et sans précision"
+20d55940f30d3d40e2aae3d77cbc94d7ee9bfc76,DAS,C787,Tumeur maligne secondaire du foie et des voies biliaires intrahépatiques
+20d55940f30d3d40e2aae3d77cbc94d7ee9bfc76,DAS,G473,Apnée du sommeil
+20d55940f30d3d40e2aae3d77cbc94d7ee9bfc76,DAS,C780,Tumeur maligne secondaire du poumon
+ff4247ddc6f9572fa73cca82acd2a927bbe7d6bb,DP,I481,Fibrillation auriculaire persistante
+ff4247ddc6f9572fa73cca82acd2a927bbe7d6bb,DAS,E1190,"Diabète sucré de type 2 insulinotraité, sans complication"
+ff4247ddc6f9572fa73cca82acd2a927bbe7d6bb,DAS,C787,Tumeur maligne secondaire du foie et des voies biliaires intrahépatiques
+ff4247ddc6f9572fa73cca82acd2a927bbe7d6bb,DAS,R410,"Désorientation, sans précision"
+ff4247ddc6f9572fa73cca82acd2a927bbe7d6bb,DAS,I255,Myocardiopathie ischémique
+fc518fd5e197166a1e086234e362d622aa83cd62,DR,C257,Tumeur maligne d'autres parties du pancréas
+fc518fd5e197166a1e086234e362d622aa83cd62,DP,Z5101,Séance de radiothérapie
+fc518fd5e197166a1e086234e362d622aa83cd62,DAS,E43,"Malnutrition protéino-énergétique grave, sans précision"
+faf077d30d7046bc53b34a4b25145f91407e562a,DR,C508,Tumeur maligne à localisations contiguës du sein
+faf077d30d7046bc53b34a4b25145f91407e562a,DP,Z5101,Séance de radiothérapie
+faf077d30d7046bc53b34a4b25145f91407e562a,DAS,E559,"Carence en vitamine D, sans précision"
+faf077d30d7046bc53b34a4b25145f91407e562a,DAS,R33,Rétention d'urine
+faf077d30d7046bc53b34a4b25145f91407e562a,DAS,G473,Apnée du sommeil
+faf077d30d7046bc53b34a4b25145f91407e562a,DAS,N185,"Maladie rénale chronique, stade 5"
+faf077d30d7046bc53b34a4b25145f91407e562a,DAS,C780,Tumeur maligne secondaire du poumon
+faf077d30d7046bc53b34a4b25145f91407e562a,DAS,I482,Fibrillation auriculaire chronique [permanente]
+fada171575e6fbd3495f131893059d8047c2283b,DP,C341,"Tumeur maligne du lobe supérieur, bronches ou poumon"
+fada171575e6fbd3495f131893059d8047c2283b,DAS,E8718,"Hypoosmolarités et hyponatrémies, autres et sans précision"
+0e50fc6a21a2c0aa16f52fbf004b1cdb0055c596,DP,D126+2,Polypose (colique) liée au gène MYH
+0e50fc6a21a2c0aa16f52fbf004b1cdb0055c596,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+5d8bb556d922225af2be8d2ff9c60e46dfe59c33,DR,C254,Tumeur maligne du pancréas endocrine
+5d8bb556d922225af2be8d2ff9c60e46dfe59c33,DP,Z511,Séance de chimiothérapie pour tumeur
+5d8bb556d922225af2be8d2ff9c60e46dfe59c33,DAS,E1190,"Diabète sucré de type 2 insulinotraité, sans complication"
+5d8bb556d922225af2be8d2ff9c60e46dfe59c33,DAS,I255,Myocardiopathie ischémique
+5d8bb556d922225af2be8d2ff9c60e46dfe59c33,DAS,I10,Hypertension essentielle (primitive)
+5d8bb556d922225af2be8d2ff9c60e46dfe59c33,DAS,E8718,"Hypoosmolarités et hyponatrémies, autres et sans précision"
+5d8bb556d922225af2be8d2ff9c60e46dfe59c33,DAS,R33,Rétention d'urine
+5d8bb556d922225af2be8d2ff9c60e46dfe59c33,DAS,N185,"Maladie rénale chronique, stade 5"
+36981b35f99e16020a9c984940cde91640366350,DR,C443,"Tumeur maligne de la peau de la face, parties autres et non précisées"
+36981b35f99e16020a9c984940cde91640366350,DP,Z5101,Séance de radiothérapie
+6c25158ecb853679d2a6aa815e8f17d0e82daa84,DR,C182,Tumeur maligne du côlon ascendant
+6c25158ecb853679d2a6aa815e8f17d0e82daa84,DP,Z511,Séance de chimiothérapie pour tumeur
+6c25158ecb853679d2a6aa815e8f17d0e82daa84,DAS,E559,"Carence en vitamine D, sans précision"
+6c25158ecb853679d2a6aa815e8f17d0e82daa84,DAS,I482,Fibrillation auriculaire chronique [permanente]
+6c25158ecb853679d2a6aa815e8f17d0e82daa84,DAS,N185,"Maladie rénale chronique, stade 5"
+6c25158ecb853679d2a6aa815e8f17d0e82daa84,DAS,E1190,"Diabète sucré de type 2 insulinotraité, sans complication"
+1a4ab7a7d584a7e8d1e9583e71602c07d0e1b8d2,DR,C187,Tumeur maligne du côlon sigmoïde
+1a4ab7a7d584a7e8d1e9583e71602c07d0e1b8d2,DP,Z511,Séance de chimiothérapie pour tumeur
+1a4ab7a7d584a7e8d1e9583e71602c07d0e1b8d2,DAS,R33,Rétention d'urine
+277c24b114f6de1de6c44f1cdceb32f49cd0ad0e,DR,C675,Tumeur maligne du col vésical
+277c24b114f6de1de6c44f1cdceb32f49cd0ad0e,DP,Z511,Séance de chimiothérapie pour tumeur
+277c24b114f6de1de6c44f1cdceb32f49cd0ad0e,DAS,I10,Hypertension essentielle (primitive)
+db1a58b5cf1ba678000a89a1d4a3047e782e3e67,DP,I258,Autres formes de cardiopathie ischémique chronique
+db1a58b5cf1ba678000a89a1d4a3047e782e3e67,DAS,C787,Tumeur maligne secondaire du foie et des voies biliaires intrahépatiques
+db1a58b5cf1ba678000a89a1d4a3047e782e3e67,DAS,N185,"Maladie rénale chronique, stade 5"
+db1a58b5cf1ba678000a89a1d4a3047e782e3e67,DAS,E43,"Malnutrition protéino-énergétique grave, sans précision"
+8265923932f9e5bcdcea8cb7dacf6b18ff3782b0,DP,C797,Tumeur maligne secondaire de la glande surrénale
+8265923932f9e5bcdcea8cb7dacf6b18ff3782b0,DAS,C780,Tumeur maligne secondaire du poumon
+d6a904ec7969c46b272260f9148dcf362fb659d5,DP,F1024,"Syndrome de dépendance à l'alcool, utilisation actuelle"
+d6a904ec7969c46b272260f9148dcf362fb659d5,DAS,E559,"Carence en vitamine D, sans précision"
+d6a904ec7969c46b272260f9148dcf362fb659d5,DAS,E43,"Malnutrition protéino-énergétique grave, sans précision"
+d6a904ec7969c46b272260f9148dcf362fb659d5,DAS,E8718,"Hypoosmolarités et hyponatrémies, autres et sans précision"
+1c59f2fd19585a8e0510d5c9f6fe6cda288fe15e,DP,D123,Tumeur bénigne du côlon transverse
+1c59f2fd19585a8e0510d5c9f6fe6cda288fe15e,DAS,C780,Tumeur maligne secondaire du poumon
+2d8987a073c31c5bce289389ab01acdaf9d2f646,DP,K500,Maladie de Crohn de l'intestin grêle
+2d8987a073c31c5bce289389ab01acdaf9d2f646,DAS,R410,"Désorientation, sans précision"
+2d8987a073c31c5bce289389ab01acdaf9d2f646,DAS,I10,Hypertension essentielle (primitive)
+2d8987a073c31c5bce289389ab01acdaf9d2f646,DAS,C780,Tumeur maligne secondaire du poumon
+2d8987a073c31c5bce289389ab01acdaf9d2f646,DAS,N185,"Maladie rénale chronique, stade 5"
+2d8987a073c31c5bce289389ab01acdaf9d2f646,DAS,E8718,"Hypoosmolarités et hyponatrémies, autres et sans précision"
+2d8987a073c31c5bce289389ab01acdaf9d2f646,DAS,E8768,"Hypokaliémies, autres et sans précision"
+2d8987a073c31c5bce289389ab01acdaf9d2f646,DAS,G473,Apnée du sommeil
+21105e6e3f513932f00d93a3c023f4481e53919b,DP,H268,Autres cataractes précisées
+21105e6e3f513932f00d93a3c023f4481e53919b,DAS,E8718,"Hypoosmolarités et hyponatrémies, autres et sans précision"
+21105e6e3f513932f00d93a3c023f4481e53919b,DAS,E1190,"Diabète sucré de type 2 insulinotraité, sans complication"
+21105e6e3f513932f00d93a3c023f4481e53919b,DAS,R410,"Désorientation, sans précision"
+21105e6e3f513932f00d93a3c023f4481e53919b,DAS,G473,Apnée du sommeil
+21105e6e3f513932f00d93a3c023f4481e53919b,DAS,I255,Myocardiopathie ischémique
+b1ac75116626e8fcc31818007a12ed502a847be4,DP,C259,"Tumeur maligne du pancréas, sans précision"
+4e60cf779e27dd307458958221c9c6b9c7eb3dca,DP,R101,Douleur localisée à la partie supérieure de l'abdomen
+4e60cf779e27dd307458958221c9c6b9c7eb3dca,DAS,C787,Tumeur maligne secondaire du foie et des voies biliaires intrahépatiques
+4e60cf779e27dd307458958221c9c6b9c7eb3dca,DAS,E8768,"Hypokaliémies, autres et sans précision"
+4e60cf779e27dd307458958221c9c6b9c7eb3dca,DAS,N185,"Maladie rénale chronique, stade 5"
+aa547fcd06e770a07e6ac6f818fe3fb5c84fd9f0,DP,F1022,"Syndrome de dépendance à l'alcool, personne suivant actuellement un régime de maintenance ou de substitution sous surveillance médicale"
+aa547fcd06e770a07e6ac6f818fe3fb5c84fd9f0,DAS,C795,Tumeur maligne secondaire des os et de la moelle osseuse
+aa547fcd06e770a07e6ac6f818fe3fb5c84fd9f0,DAS,N185,"Maladie rénale chronique, stade 5"
+aa547fcd06e770a07e6ac6f818fe3fb5c84fd9f0,DAS,E1190,"Diabète sucré de type 2 insulinotraité, sans complication"
+aa547fcd06e770a07e6ac6f818fe3fb5c84fd9f0,DAS,R410,"Désorientation, sans précision"
+aa547fcd06e770a07e6ac6f818fe3fb5c84fd9f0,DAS,E559,"Carence en vitamine D, sans précision"
+aa547fcd06e770a07e6ac6f818fe3fb5c84fd9f0,DAS,E8718,"Hypoosmolarités et hyponatrémies, autres et sans précision"
+aa547fcd06e770a07e6ac6f818fe3fb5c84fd9f0,DAS,I255,Myocardiopathie ischémique
+599f51343832fa8a5412a07a3c3be6a3b49aeafd,DR,C182,Tumeur maligne du côlon ascendant
+599f51343832fa8a5412a07a3c3be6a3b49aeafd,DP,Z5101,Séance de radiothérapie
+599f51343832fa8a5412a07a3c3be6a3b49aeafd,DAS,G473,Apnée du sommeil
+599f51343832fa8a5412a07a3c3be6a3b49aeafd,DAS,E559,"Carence en vitamine D, sans précision"
+599f51343832fa8a5412a07a3c3be6a3b49aeafd,DAS,C795,Tumeur maligne secondaire des os et de la moelle osseuse
+599f51343832fa8a5412a07a3c3be6a3b49aeafd,DAS,E43,"Malnutrition protéino-énergétique grave, sans précision"
+599f51343832fa8a5412a07a3c3be6a3b49aeafd,DAS,N185,"Maladie rénale chronique, stade 5"
+313e559e84da23324178512f96a9eef81508241f,DR,C508,Tumeur maligne à localisations contiguës du sein
+313e559e84da23324178512f96a9eef81508241f,DP,Z5101,Séance de radiothérapie
+313e559e84da23324178512f96a9eef81508241f,DAS,C795,Tumeur maligne secondaire des os et de la moelle osseuse
+313e559e84da23324178512f96a9eef81508241f,DAS,E43,"Malnutrition protéino-énergétique grave, sans précision"
+313e559e84da23324178512f96a9eef81508241f,DAS,E559,"Carence en vitamine D, sans précision"
+313e559e84da23324178512f96a9eef81508241f,DAS,I10,Hypertension essentielle (primitive)
+313e559e84da23324178512f96a9eef81508241f,DAS,I255,Myocardiopathie ischémique
+313e559e84da23324178512f96a9eef81508241f,DAS,C780,Tumeur maligne secondaire du poumon
+3f8764345df74bb646a8a6def671abc4c21bb52b,DP,K635,Polype du côlon
+3f8764345df74bb646a8a6def671abc4c21bb52b,DAS,G473,Apnée du sommeil
+3f8764345df74bb646a8a6def671abc4c21bb52b,DAS,E8718,"Hypoosmolarités et hyponatrémies, autres et sans précision"
+3f8764345df74bb646a8a6def671abc4c21bb52b,DAS,N185,"Maladie rénale chronique, stade 5"
+6865d545b167a87e5659611caa1e4d92b496583f,DR,C902,Plasmocytome extra-médullaire
+6865d545b167a87e5659611caa1e4d92b496583f,DP,Z5101,Séance de radiothérapie
+6865d545b167a87e5659611caa1e4d92b496583f,DAS,E1190,"Diabète sucré de type 2 insulinotraité, sans complication"
+6865d545b167a87e5659611caa1e4d92b496583f,DAS,I482,Fibrillation auriculaire chronique [permanente]
+6865d545b167a87e5659611caa1e4d92b496583f,DAS,E43,"Malnutrition protéino-énergétique grave, sans précision"
+6865d545b167a87e5659611caa1e4d92b496583f,DAS,E559,"Carence en vitamine D, sans précision"
+6865d545b167a87e5659611caa1e4d92b496583f,DAS,I255,Myocardiopathie ischémique
+6865d545b167a87e5659611caa1e4d92b496583f,DAS,E8718,"Hypoosmolarités et hyponatrémies, autres et sans précision"
+635da929b0b93c6d366c4f5f560223c7c298114b,DP,F1021,"Syndrome de dépendance à l'alcool, personne actuellement abstinente mais dans un environnement protégé"
+1a5842cef5e561ed036b0de816d094720c1a7b72,DP,H269,"Cataracte, sans précision"
+1a5842cef5e561ed036b0de816d094720c1a7b72,DAS,R33,Rétention d'urine
+1a5842cef5e561ed036b0de816d094720c1a7b72,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+1a5842cef5e561ed036b0de816d094720c1a7b72,DAS,I10,Hypertension essentielle (primitive)
+2130bad183e72569f47b82bd68efa068df6c0fbf,DR,C183,Tumeur maligne de l'angle droit du côlon
+2130bad183e72569f47b82bd68efa068df6c0fbf,DP,Z5101,Séance de radiothérapie
+2130bad183e72569f47b82bd68efa068df6c0fbf,DAS,I255,Myocardiopathie ischémique
+2130bad183e72569f47b82bd68efa068df6c0fbf,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+2130bad183e72569f47b82bd68efa068df6c0fbf,DAS,E8768,"Hypokaliémies, autres et sans précision"
+2130bad183e72569f47b82bd68efa068df6c0fbf,DAS,I10,Hypertension essentielle (primitive)
+2130bad183e72569f47b82bd68efa068df6c0fbf,DAS,R33,Rétention d'urine
+2130bad183e72569f47b82bd68efa068df6c0fbf,DAS,N185,"Maladie rénale chronique, stade 5"
+c7018562f6d1bee0042891d7de13c2ade0da3d51,DP,K291,Autres gastrites aiguës
+c7018562f6d1bee0042891d7de13c2ade0da3d51,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+fb1645cf2252f6caca5d123a7c29b13aef5a7e42,DP,F1005,"Troubles mentaux et du comportement dus à une intoxication aigüe par l'alcool, avec coma"
+fb1645cf2252f6caca5d123a7c29b13aef5a7e42,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+fb1645cf2252f6caca5d123a7c29b13aef5a7e42,DAS,C780,Tumeur maligne secondaire du poumon
+fb1645cf2252f6caca5d123a7c29b13aef5a7e42,DAS,R33,Rétention d'urine
+f83b088f7d0def30ddce489ccea0e09d287f0ad3,DP,K298,Duodénite
+f83b088f7d0def30ddce489ccea0e09d287f0ad3,DAS,I482,Fibrillation auriculaire chronique [permanente]
+f83b088f7d0def30ddce489ccea0e09d287f0ad3,DAS,I10,Hypertension essentielle (primitive)
+823229fecb02ab531838e58bb048efd32530a55b,DR,C440,Tumeur maligne de la face cutanée de la lèvre
+823229fecb02ab531838e58bb048efd32530a55b,DP,Z5101,Séance de radiothérapie
+823229fecb02ab531838e58bb048efd32530a55b,DAS,E43,"Malnutrition protéino-énergétique grave, sans précision"
+823229fecb02ab531838e58bb048efd32530a55b,DAS,E8718,"Hypoosmolarités et hyponatrémies, autres et sans précision"
+823229fecb02ab531838e58bb048efd32530a55b,DAS,I255,Myocardiopathie ischémique
+823229fecb02ab531838e58bb048efd32530a55b,DAS,E8768,"Hypokaliémies, autres et sans précision"
+f4c3477a2bccb2b57ecfa5e3b4488253916095b1,DP,F101,Troubles mentaux et du comportement liés à l'utilisation d'alcool : utilisation nocive pour la santé
+f4c3477a2bccb2b57ecfa5e3b4488253916095b1,DAS,C780,Tumeur maligne secondaire du poumon
+980300b0476f6e875d24c09edfffbf93172435f8,DP,R074,"Douleur thoracique, sans précision"
+980300b0476f6e875d24c09edfffbf93172435f8,DAS,R33,Rétention d'urine
+980300b0476f6e875d24c09edfffbf93172435f8,DAS,I482,Fibrillation auriculaire chronique [permanente]
+980300b0476f6e875d24c09edfffbf93172435f8,DAS,N185,"Maladie rénale chronique, stade 5"
+880ea44f443c770406ec28673e35fd23ccc1cac7,DP,K578,"Diverticulose de l'intestin (siège non précisé), avec perforation et abcès"
+880ea44f443c770406ec28673e35fd23ccc1cac7,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+880ea44f443c770406ec28673e35fd23ccc1cac7,DAS,I255,Myocardiopathie ischémique
+880ea44f443c770406ec28673e35fd23ccc1cac7,DAS,C795,Tumeur maligne secondaire des os et de la moelle osseuse
+7c8bf2999e1c665237f9752f5f89c13b85dd5d75,DP,D126+5,Polypose (colique) au cours du syndrome de Peutz-Jeghers
+7c8bf2999e1c665237f9752f5f89c13b85dd5d75,DAS,E43,"Malnutrition protéino-énergétique grave, sans précision"
+7c8bf2999e1c665237f9752f5f89c13b85dd5d75,DAS,I255,Myocardiopathie ischémique
+7c8bf2999e1c665237f9752f5f89c13b85dd5d75,DAS,I482,Fibrillation auriculaire chronique [permanente]
+7c8bf2999e1c665237f9752f5f89c13b85dd5d75,DAS,G473,Apnée du sommeil
+5d71983038d8acc5de5729ae9ad4fc5704f863ec,DR,C793,Tumeur maligne secondaire du cerveau et des méninges cérébrales
+5d71983038d8acc5de5729ae9ad4fc5704f863ec,DP,Z511,Séance de chimiothérapie pour tumeur
+5d71983038d8acc5de5729ae9ad4fc5704f863ec,DAS,C787,Tumeur maligne secondaire du foie et des voies biliaires intrahépatiques
+5d71983038d8acc5de5729ae9ad4fc5704f863ec,DAS,G473,Apnée du sommeil
+8390536d0283e55077e25c9e48d92a6b694c46fe,DP,R101,Douleur localisée à la partie supérieure de l'abdomen
+8390536d0283e55077e25c9e48d92a6b694c46fe,DAS,C787,Tumeur maligne secondaire du foie et des voies biliaires intrahépatiques
+8390536d0283e55077e25c9e48d92a6b694c46fe,DAS,N185,"Maladie rénale chronique, stade 5"
+8390536d0283e55077e25c9e48d92a6b694c46fe,DAS,R33,Rétention d'urine
+41ec7e5d5defaf8c8d351d6f3d4de121502f4c68,DR,C259+0,"Tumeur maligne du pancréas, familiale"
+41ec7e5d5defaf8c8d351d6f3d4de121502f4c68,DP,Z511,Séance de chimiothérapie pour tumeur
+41ec7e5d5defaf8c8d351d6f3d4de121502f4c68,DAS,E43,"Malnutrition protéino-énergétique grave, sans précision"
+41ec7e5d5defaf8c8d351d6f3d4de121502f4c68,DAS,R33,Rétention d'urine
+41ec7e5d5defaf8c8d351d6f3d4de121502f4c68,DAS,E559,"Carence en vitamine D, sans précision"
+41ec7e5d5defaf8c8d351d6f3d4de121502f4c68,DAS,I482,Fibrillation auriculaire chronique [permanente]
+41ec7e5d5defaf8c8d351d6f3d4de121502f4c68,DAS,C787,Tumeur maligne secondaire du foie et des voies biliaires intrahépatiques
+41ec7e5d5defaf8c8d351d6f3d4de121502f4c68,DAS,I255,Myocardiopathie ischémique
+35ebf8f7718cfb43a87987398d971a92b287d5f1,DP,F1051,"Trouble psychotique avec idées délirantes au premier plan, dû à l'alcool"
+35ebf8f7718cfb43a87987398d971a92b287d5f1,DAS,I10,Hypertension essentielle (primitive)
+35ebf8f7718cfb43a87987398d971a92b287d5f1,DAS,E559,"Carence en vitamine D, sans précision"
+35ebf8f7718cfb43a87987398d971a92b287d5f1,DAS,E8718,"Hypoosmolarités et hyponatrémies, autres et sans précision"
+35ebf8f7718cfb43a87987398d971a92b287d5f1,DAS,N185,"Maladie rénale chronique, stade 5"
+35ebf8f7718cfb43a87987398d971a92b287d5f1,DAS,E1190,"Diabète sucré de type 2 insulinotraité, sans complication"
+35ebf8f7718cfb43a87987398d971a92b287d5f1,DAS,C787,Tumeur maligne secondaire du foie et des voies biliaires intrahépatiques
+35ebf8f7718cfb43a87987398d971a92b287d5f1,DAS,C795,Tumeur maligne secondaire des os et de la moelle osseuse
+071814af5650e9ab8dbeea65f96303bc1b30b75b,DP,D129,Tumeur bénigne de l'anus et du canal anal
+071814af5650e9ab8dbeea65f96303bc1b30b75b,DAS,C795,Tumeur maligne secondaire des os et de la moelle osseuse
+071814af5650e9ab8dbeea65f96303bc1b30b75b,DAS,I482,Fibrillation auriculaire chronique [permanente]
+071814af5650e9ab8dbeea65f96303bc1b30b75b,DAS,R33,Rétention d'urine
+071814af5650e9ab8dbeea65f96303bc1b30b75b,DAS,E559,"Carence en vitamine D, sans précision"
+071814af5650e9ab8dbeea65f96303bc1b30b75b,DAS,I10,Hypertension essentielle (primitive)
+071814af5650e9ab8dbeea65f96303bc1b30b75b,DAS,E8768,"Hypokaliémies, autres et sans précision"
+efcf6ebcab395bbc2418b4a29d89330df0cb1444,DP,F1031,"Syndrome de sevrage de l'alcool, avec convulsions"
+efcf6ebcab395bbc2418b4a29d89330df0cb1444,DAS,R410,"Désorientation, sans précision"
+efcf6ebcab395bbc2418b4a29d89330df0cb1444,DAS,E559,"Carence en vitamine D, sans précision"
+d197d93ca5438e2cbd5f2226ccbacd5de8c6a281,DP,R102,Douleur pelvienne et périnéale
+d197d93ca5438e2cbd5f2226ccbacd5de8c6a281,DAS,I10,Hypertension essentielle (primitive)
+d197d93ca5438e2cbd5f2226ccbacd5de8c6a281,DAS,I482,Fibrillation auriculaire chronique [permanente]
+d197d93ca5438e2cbd5f2226ccbacd5de8c6a281,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+d197d93ca5438e2cbd5f2226ccbacd5de8c6a281,DAS,E559,"Carence en vitamine D, sans précision"
+d197d93ca5438e2cbd5f2226ccbacd5de8c6a281,DAS,C795,Tumeur maligne secondaire des os et de la moelle osseuse
+5c111d283e6e61b158e018752e28b779be60afbe,DP,H264,Séquelles de cataracte
+5c111d283e6e61b158e018752e28b779be60afbe,DAS,G473,Apnée du sommeil
+5c111d283e6e61b158e018752e28b779be60afbe,DAS,E8768,"Hypokaliémies, autres et sans précision"
+5c111d283e6e61b158e018752e28b779be60afbe,DAS,C795,Tumeur maligne secondaire des os et de la moelle osseuse
+021990d14d3fe9ab1a4a6b1504544fd621d06ba1,DR,C349,"Tumeur maligne de bronche ou du poumon, sans précision"
+021990d14d3fe9ab1a4a6b1504544fd621d06ba1,DP,Z5101,Séance de radiothérapie
+021990d14d3fe9ab1a4a6b1504544fd621d06ba1,DAS,C795,Tumeur maligne secondaire des os et de la moelle osseuse
+021990d14d3fe9ab1a4a6b1504544fd621d06ba1,DAS,N185,"Maladie rénale chronique, stade 5"
+021990d14d3fe9ab1a4a6b1504544fd621d06ba1,DAS,R33,Rétention d'urine
+021990d14d3fe9ab1a4a6b1504544fd621d06ba1,DAS,E8768,"Hypokaliémies, autres et sans précision"
+1c8baf35995e67e6766c9ace2b2eb10513c7f2f0,DR,C183,Tumeur maligne de l'angle droit du côlon
+1c8baf35995e67e6766c9ace2b2eb10513c7f2f0,DP,Z511,Séance de chimiothérapie pour tumeur
+5c61ff1762528388c82daeb9ce09095f53411ddf,DP,R073,Autres douleurs thoraciques
+5c61ff1762528388c82daeb9ce09095f53411ddf,DAS,N185,"Maladie rénale chronique, stade 5"
+de3d1ceb1cc79aa82288877b6ada8749593fa9b1,DP,C446,"Tumeur maligne de la peau du membre supérieur, y compris l'épaule"
+de3d1ceb1cc79aa82288877b6ada8749593fa9b1,DAS,N185,"Maladie rénale chronique, stade 5"
+de3d1ceb1cc79aa82288877b6ada8749593fa9b1,DAS,I482,Fibrillation auriculaire chronique [permanente]
+de3d1ceb1cc79aa82288877b6ada8749593fa9b1,DAS,E559,"Carence en vitamine D, sans précision"
+3619f33f1ffa878acddaefeaf8de47d8602ab3c1,DR,C448,Tumeur maligne à localisations contiguës de la peau
+3619f33f1ffa878acddaefeaf8de47d8602ab3c1,DP,Z5101,Séance de radiothérapie
+3619f33f1ffa878acddaefeaf8de47d8602ab3c1,DAS,R33,Rétention d'urine
+ce1228f49487344878d9b8d533202f287da5f174,DP,K630,Abcès de l'intestin
+ce1228f49487344878d9b8d533202f287da5f174,DAS,E559,"Carence en vitamine D, sans précision"
+ce1228f49487344878d9b8d533202f287da5f174,DAS,R33,Rétention d'urine
+0b117276f590dfa9492fffae5e11be1c30e6cd24,DP,I256,Ischémie myocardique asymptomatique
+0b117276f590dfa9492fffae5e11be1c30e6cd24,DAS,I10,Hypertension essentielle (primitive)
+0b117276f590dfa9492fffae5e11be1c30e6cd24,DAS,C787,Tumeur maligne secondaire du foie et des voies biliaires intrahépatiques
+0b117276f590dfa9492fffae5e11be1c30e6cd24,DAS,C795,Tumeur maligne secondaire des os et de la moelle osseuse
+0b117276f590dfa9492fffae5e11be1c30e6cd24,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+0b117276f590dfa9492fffae5e11be1c30e6cd24,DAS,I482,Fibrillation auriculaire chronique [permanente]
+0b117276f590dfa9492fffae5e11be1c30e6cd24,DAS,C780,Tumeur maligne secondaire du poumon
+37fa10b3796761ad261fc3e86a60c8a84a267ea1,DP,F108,Autres troubles mentaux et du comportement liés à l'utilisation d'alcool
+37fa10b3796761ad261fc3e86a60c8a84a267ea1,DAS,I10,Hypertension essentielle (primitive)
+37fa10b3796761ad261fc3e86a60c8a84a267ea1,DAS,E8718,"Hypoosmolarités et hyponatrémies, autres et sans précision"
+37fa10b3796761ad261fc3e86a60c8a84a267ea1,DAS,I482,Fibrillation auriculaire chronique [permanente]
+37fa10b3796761ad261fc3e86a60c8a84a267ea1,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+37fa10b3796761ad261fc3e86a60c8a84a267ea1,DAS,E1190,"Diabète sucré de type 2 insulinotraité, sans complication"
+37fa10b3796761ad261fc3e86a60c8a84a267ea1,DAS,N185,"Maladie rénale chronique, stade 5"
+fbca65667f8f72076d4b6d3571baa985fe9c71f0,DP,R073,Autres douleurs thoraciques
+fbca65667f8f72076d4b6d3571baa985fe9c71f0,DAS,E43,"Malnutrition protéino-énergétique grave, sans précision"
+fbca65667f8f72076d4b6d3571baa985fe9c71f0,DAS,N185,"Maladie rénale chronique, stade 5"
+fbca65667f8f72076d4b6d3571baa985fe9c71f0,DAS,E1190,"Diabète sucré de type 2 insulinotraité, sans complication"
+fbca65667f8f72076d4b6d3571baa985fe9c71f0,DAS,R410,"Désorientation, sans précision"
+fbca65667f8f72076d4b6d3571baa985fe9c71f0,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+8de9f197063f7cbdac2cf260ef2b74978d1de501,DP,I5001,"Insuffisance cardiaque congestive, avec fraction d'éjection ventriculaire gauche [FEVG] inférieure à 50 et supérieure ou égale à 40"
+8de9f197063f7cbdac2cf260ef2b74978d1de501,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+8de9f197063f7cbdac2cf260ef2b74978d1de501,DAS,C780,Tumeur maligne secondaire du poumon
+8de9f197063f7cbdac2cf260ef2b74978d1de501,DAS,I10,Hypertension essentielle (primitive)
+8de9f197063f7cbdac2cf260ef2b74978d1de501,DAS,I255,Myocardiopathie ischémique
+8de9f197063f7cbdac2cf260ef2b74978d1de501,DAS,E1190,"Diabète sucré de type 2 insulinotraité, sans complication"
+3f3260bd17d2c7c84a4eef6d9b97ed937008effb,DP,K575,"Diverticulose du côlon et de l'intestin grêle, (sans perforation ni abcès)"
+3f3260bd17d2c7c84a4eef6d9b97ed937008effb,DAS,R33,Rétention d'urine
+3f3260bd17d2c7c84a4eef6d9b97ed937008effb,DAS,G473,Apnée du sommeil
+3f3260bd17d2c7c84a4eef6d9b97ed937008effb,DAS,R410,"Désorientation, sans précision"
+60857891ef113d826dc1aa597036b1b5ec950ce0,DP,I258,Autres formes de cardiopathie ischémique chronique
+60857891ef113d826dc1aa597036b1b5ec950ce0,DAS,R33,Rétention d'urine
+60857891ef113d826dc1aa597036b1b5ec950ce0,DAS,C787,Tumeur maligne secondaire du foie et des voies biliaires intrahépatiques
+60857891ef113d826dc1aa597036b1b5ec950ce0,DAS,E8768,"Hypokaliémies, autres et sans précision"
+60857891ef113d826dc1aa597036b1b5ec950ce0,DAS,C795,Tumeur maligne secondaire des os et de la moelle osseuse
+60857891ef113d826dc1aa597036b1b5ec950ce0,DAS,E559,"Carence en vitamine D, sans précision"
+60857891ef113d826dc1aa597036b1b5ec950ce0,DAS,E1190,"Diabète sucré de type 2 insulinotraité, sans complication"
+60857891ef113d826dc1aa597036b1b5ec950ce0,DAS,E8718,"Hypoosmolarités et hyponatrémies, autres et sans précision"
+a0acb173df76671a7292d1db8d6605f0a6d6ca9f,DP,K501,Maladie de Crohn du gros intestin
+a0acb173df76671a7292d1db8d6605f0a6d6ca9f,DAS,E1190,"Diabète sucré de type 2 insulinotraité, sans complication"
+df01d3681a3f1f72c4df88fb3ee3f5afb53bdf2e,DP,D126+5,Polypose (colique) au cours du syndrome de Peutz-Jeghers
+df01d3681a3f1f72c4df88fb3ee3f5afb53bdf2e,DAS,C795,Tumeur maligne secondaire des os et de la moelle osseuse
+b24856185e7159bd5c4465ea3323917e7a5e7f8b,DR,C902,Plasmocytome extra-médullaire
+b24856185e7159bd5c4465ea3323917e7a5e7f8b,DP,Z511,Séance de chimiothérapie pour tumeur
+b24856185e7159bd5c4465ea3323917e7a5e7f8b,DAS,R410,"Désorientation, sans précision"
+b24856185e7159bd5c4465ea3323917e7a5e7f8b,DAS,E559,"Carence en vitamine D, sans précision"
+096065a112096552e71cf6d78b2d773e2f1450b0,DP,I254,Anévrisme et dissection d'une artère coronaire
+096065a112096552e71cf6d78b2d773e2f1450b0,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+096065a112096552e71cf6d78b2d773e2f1450b0,DAS,C795,Tumeur maligne secondaire des os et de la moelle osseuse
+096065a112096552e71cf6d78b2d773e2f1450b0,DAS,C787,Tumeur maligne secondaire du foie et des voies biliaires intrahépatiques
+096065a112096552e71cf6d78b2d773e2f1450b0,DAS,E8718,"Hypoosmolarités et hyponatrémies, autres et sans précision"
+096065a112096552e71cf6d78b2d773e2f1450b0,DAS,C780,Tumeur maligne secondaire du poumon
+200ade5a89ed214a876dae83c2ae7da48e88f74a,DP,R074,"Douleur thoracique, sans précision"
+200ade5a89ed214a876dae83c2ae7da48e88f74a,DAS,I255,Myocardiopathie ischémique
+200ade5a89ed214a876dae83c2ae7da48e88f74a,DAS,R33,Rétention d'urine
+db6d9392a975408f3f0064d1f5c123b1284402ac,DP,K631,Perforation de l'intestin (non traumatique)
+db6d9392a975408f3f0064d1f5c123b1284402ac,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+db6d9392a975408f3f0064d1f5c123b1284402ac,DAS,E43,"Malnutrition protéino-énergétique grave, sans précision"
+93868629cef09decda4d3640366a1d06968fa43b,DP,F1073,"Démence, due à l'alcool"
+93868629cef09decda4d3640366a1d06968fa43b,DAS,E1190,"Diabète sucré de type 2 insulinotraité, sans complication"
+93868629cef09decda4d3640366a1d06968fa43b,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+93868629cef09decda4d3640366a1d06968fa43b,DAS,I482,Fibrillation auriculaire chronique [permanente]
+93868629cef09decda4d3640366a1d06968fa43b,DAS,E559,"Carence en vitamine D, sans précision"
+0c182b6303c8227eb89430f3efd3b5e79af46851,DP,K635,Polype du côlon
+0c182b6303c8227eb89430f3efd3b5e79af46851,DAS,R410,"Désorientation, sans précision"
+0c182b6303c8227eb89430f3efd3b5e79af46851,DAS,I255,Myocardiopathie ischémique
+0c182b6303c8227eb89430f3efd3b5e79af46851,DAS,E559,"Carence en vitamine D, sans précision"
+0c182b6303c8227eb89430f3efd3b5e79af46851,DAS,C795,Tumeur maligne secondaire des os et de la moelle osseuse
+0c182b6303c8227eb89430f3efd3b5e79af46851,DAS,E1190,"Diabète sucré de type 2 insulinotraité, sans complication"
+ea207a706d32a00f50d9fd034071b2379d38b228,DP,F1023,"Syndrome de dépendance à l'alcool, personne actuellement abstinente, mais prenant des médicaments aversifs ou bloquants"
+ea207a706d32a00f50d9fd034071b2379d38b228,DAS,C780,Tumeur maligne secondaire du poumon
+af9d3bef5a5f5e1e7280884803384601052e11e7,DP,F1023,"Syndrome de dépendance à l'alcool, personne actuellement abstinente, mais prenant des médicaments aversifs ou bloquants"
+af9d3bef5a5f5e1e7280884803384601052e11e7,DAS,E8768,"Hypokaliémies, autres et sans précision"
+af9d3bef5a5f5e1e7280884803384601052e11e7,DAS,C780,Tumeur maligne secondaire du poumon
+7eb9c327dd963e326ec4fda65433db91e5b9a0ad,DP,F102,Troubles mentaux et du comportement liés à l'utilisation d'alcool : syndrome de dépendance
+7eb9c327dd963e326ec4fda65433db91e5b9a0ad,DAS,I482,Fibrillation auriculaire chronique [permanente]
+c19e456cbd572185d7dcc8ddd9b6c71337d7a82b,DP,C449,"Tumeur maligne de la peau, sans précision"
+c19e456cbd572185d7dcc8ddd9b6c71337d7a82b,DAS,G473,Apnée du sommeil
+c19e456cbd572185d7dcc8ddd9b6c71337d7a82b,DAS,I482,Fibrillation auriculaire chronique [permanente]
+c19e456cbd572185d7dcc8ddd9b6c71337d7a82b,DAS,E559,"Carence en vitamine D, sans précision"
+c19e456cbd572185d7dcc8ddd9b6c71337d7a82b,DAS,I10,Hypertension essentielle (primitive)
+c19e456cbd572185d7dcc8ddd9b6c71337d7a82b,DAS,E1190,"Diabète sucré de type 2 insulinotraité, sans complication"
+c19e456cbd572185d7dcc8ddd9b6c71337d7a82b,DAS,E43,"Malnutrition protéino-énergétique grave, sans précision"
+b0d82c3c18dba155ce62043484bb5ae829ff803e,DP,H269,"Cataracte, sans précision"
+b0d82c3c18dba155ce62043484bb5ae829ff803e,DAS,I255,Myocardiopathie ischémique
+b0d82c3c18dba155ce62043484bb5ae829ff803e,DAS,C780,Tumeur maligne secondaire du poumon
+b0d82c3c18dba155ce62043484bb5ae829ff803e,DAS,E8718,"Hypoosmolarités et hyponatrémies, autres et sans précision"
+b0d82c3c18dba155ce62043484bb5ae829ff803e,DAS,R33,Rétention d'urine
+b0d82c3c18dba155ce62043484bb5ae829ff803e,DAS,E8768,"Hypokaliémies, autres et sans précision"
+b0d82c3c18dba155ce62043484bb5ae829ff803e,DAS,E1190,"Diabète sucré de type 2 insulinotraité, sans complication"
+06925137e0b0426197f0571dd6799525d29106a5,DP,C440,Tumeur maligne de la face cutanée de la lèvre
+06925137e0b0426197f0571dd6799525d29106a5,DAS,E559,"Carence en vitamine D, sans précision"
+c0756cc70c37b9eb0b629386df5afccdcac72abc,DR,C677,Tumeur maligne de l'ouraque
+c0756cc70c37b9eb0b629386df5afccdcac72abc,DP,Z511,Séance de chimiothérapie pour tumeur
+c0756cc70c37b9eb0b629386df5afccdcac72abc,DAS,C795,Tumeur maligne secondaire des os et de la moelle osseuse
+c0756cc70c37b9eb0b629386df5afccdcac72abc,DAS,C780,Tumeur maligne secondaire du poumon
+c0756cc70c37b9eb0b629386df5afccdcac72abc,DAS,G473,Apnée du sommeil
+c0756cc70c37b9eb0b629386df5afccdcac72abc,DAS,C787,Tumeur maligne secondaire du foie et des voies biliaires intrahépatiques
+ffe4a6c617193e93bb54d0a7da0300c295275918,DR,C250,Tumeur maligne de la tête du pancréas
+ffe4a6c617193e93bb54d0a7da0300c295275918,DP,Z511,Séance de chimiothérapie pour tumeur
+3769262e1e9cb69b1f1e8febb2e8f04fa3c86f17,DP,K638,Autres maladies précisées de l'intestin
+3769262e1e9cb69b1f1e8febb2e8f04fa3c86f17,DAS,I255,Myocardiopathie ischémique
+3769262e1e9cb69b1f1e8febb2e8f04fa3c86f17,DAS,N185,"Maladie rénale chronique, stade 5"
+3769262e1e9cb69b1f1e8febb2e8f04fa3c86f17,DAS,R410,"Désorientation, sans précision"
+3769262e1e9cb69b1f1e8febb2e8f04fa3c86f17,DAS,C795,Tumeur maligne secondaire des os et de la moelle osseuse
+3769262e1e9cb69b1f1e8febb2e8f04fa3c86f17,DAS,I482,Fibrillation auriculaire chronique [permanente]
+3769262e1e9cb69b1f1e8febb2e8f04fa3c86f17,DAS,C787,Tumeur maligne secondaire du foie et des voies biliaires intrahépatiques
+e338141daab10b084dd59a19c6bc2a7af7faa0d2,DP,H269,"Cataracte, sans précision"
+e338141daab10b084dd59a19c6bc2a7af7faa0d2,DAS,I255,Myocardiopathie ischémique
+e338141daab10b084dd59a19c6bc2a7af7faa0d2,DAS,E43,"Malnutrition protéino-énergétique grave, sans précision"
+e338141daab10b084dd59a19c6bc2a7af7faa0d2,DAS,R33,Rétention d'urine
+ed717c57b8f0aa93c0527987953e22b3cd339cf8,DP,C348,Tumeur maligne à localisations contiguës des bronches et du poumon
+ed717c57b8f0aa93c0527987953e22b3cd339cf8,DAS,C780,Tumeur maligne secondaire du poumon
+ed717c57b8f0aa93c0527987953e22b3cd339cf8,DAS,R410,"Désorientation, sans précision"
+ed717c57b8f0aa93c0527987953e22b3cd339cf8,DAS,N185,"Maladie rénale chronique, stade 5"
+ed717c57b8f0aa93c0527987953e22b3cd339cf8,DAS,I482,Fibrillation auriculaire chronique [permanente]
+ed717c57b8f0aa93c0527987953e22b3cd339cf8,DAS,I10,Hypertension essentielle (primitive)
+ed717c57b8f0aa93c0527987953e22b3cd339cf8,DAS,E1190,"Diabète sucré de type 2 insulinotraité, sans complication"
+ed717c57b8f0aa93c0527987953e22b3cd339cf8,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+e5a4b9a1d240559ba628d62f370a17d948529d21,DP,C509,"Tumeur maligne du sein, sans précision"
+6e2104333eadc16b0c9e2ba2aa453579dc3abe99,DR,C180,Tumeur maligne du caecum
+6e2104333eadc16b0c9e2ba2aa453579dc3abe99,DP,Z5101,Séance de radiothérapie
+6e2104333eadc16b0c9e2ba2aa453579dc3abe99,DAS,E559,"Carence en vitamine D, sans précision"
+6e2104333eadc16b0c9e2ba2aa453579dc3abe99,DAS,I10,Hypertension essentielle (primitive)
+6e2104333eadc16b0c9e2ba2aa453579dc3abe99,DAS,R410,"Désorientation, sans précision"
+6e2104333eadc16b0c9e2ba2aa453579dc3abe99,DAS,E8718,"Hypoosmolarités et hyponatrémies, autres et sans précision"
+c6db998e143dfabd75f8574293f6a5ee38a9584c,DP,K298,Duodénite
+c6db998e143dfabd75f8574293f6a5ee38a9584c,DAS,E43,"Malnutrition protéino-énergétique grave, sans précision"
+c6db998e143dfabd75f8574293f6a5ee38a9584c,DAS,E559,"Carence en vitamine D, sans précision"
+c6db998e143dfabd75f8574293f6a5ee38a9584c,DAS,I482,Fibrillation auriculaire chronique [permanente]
+c6db998e143dfabd75f8574293f6a5ee38a9584c,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+c6db998e143dfabd75f8574293f6a5ee38a9584c,DAS,C780,Tumeur maligne secondaire du poumon
+c6db998e143dfabd75f8574293f6a5ee38a9584c,DAS,R410,"Désorientation, sans précision"
+498911cc9c2ff6a9d10b6184e114a77a5c254bc9,DR,C508,Tumeur maligne à localisations contiguës du sein
+498911cc9c2ff6a9d10b6184e114a77a5c254bc9,DP,Z5101,Séance de radiothérapie
+498911cc9c2ff6a9d10b6184e114a77a5c254bc9,DAS,E8768,"Hypokaliémies, autres et sans précision"
+498911cc9c2ff6a9d10b6184e114a77a5c254bc9,DAS,E8718,"Hypoosmolarités et hyponatrémies, autres et sans précision"
+498911cc9c2ff6a9d10b6184e114a77a5c254bc9,DAS,N185,"Maladie rénale chronique, stade 5"
+498911cc9c2ff6a9d10b6184e114a77a5c254bc9,DAS,C795,Tumeur maligne secondaire des os et de la moelle osseuse
+498911cc9c2ff6a9d10b6184e114a77a5c254bc9,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+498911cc9c2ff6a9d10b6184e114a77a5c254bc9,DAS,I482,Fibrillation auriculaire chronique [permanente]
+8439b31eb9f0b29930bade4a243a9fb65da92edd,DP,F1024,"Syndrome de dépendance à l'alcool, utilisation actuelle"
+8439b31eb9f0b29930bade4a243a9fb65da92edd,DAS,E8768,"Hypokaliémies, autres et sans précision"
+8439b31eb9f0b29930bade4a243a9fb65da92edd,DAS,C795,Tumeur maligne secondaire des os et de la moelle osseuse
+a8a014b154ee3ad29be60fd3357ff3de4d969248,DP,R102,Douleur pelvienne et périnéale
+a8a014b154ee3ad29be60fd3357ff3de4d969248,DAS,R33,Rétention d'urine
+a8a014b154ee3ad29be60fd3357ff3de4d969248,DAS,C780,Tumeur maligne secondaire du poumon
+a8a014b154ee3ad29be60fd3357ff3de4d969248,DAS,C787,Tumeur maligne secondaire du foie et des voies biliaires intrahépatiques
+a8a014b154ee3ad29be60fd3357ff3de4d969248,DAS,E43,"Malnutrition protéino-énergétique grave, sans précision"
+e4c369f4a149ea4037fab7d93bfc1e807e8b5ff2,DP,K570,"Diverticulose de l'intestin grêle, avec perforation et abcès"
+e4c369f4a149ea4037fab7d93bfc1e807e8b5ff2,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+e4c369f4a149ea4037fab7d93bfc1e807e8b5ff2,DAS,I10,Hypertension essentielle (primitive)
+b2fc3898333cf80e3dabf86564ae215ba965ee6c,DR,C442,Tumeur maligne de la peau de l'oreille et du conduit auditif externe
+b2fc3898333cf80e3dabf86564ae215ba965ee6c,DP,Z5101,Séance de radiothérapie
+b2fc3898333cf80e3dabf86564ae215ba965ee6c,DAS,N185,"Maladie rénale chronique, stade 5"
+b2fc3898333cf80e3dabf86564ae215ba965ee6c,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+8020022d706282a1b5095d2ad2690e78ba347f98,DP,K631,Perforation de l'intestin (non traumatique)
+8020022d706282a1b5095d2ad2690e78ba347f98,DAS,E43,"Malnutrition protéino-énergétique grave, sans précision"
+8020022d706282a1b5095d2ad2690e78ba347f98,DAS,C780,Tumeur maligne secondaire du poumon
+f5d53c377782deafa729735b99b0aaea0a55543d,DP,C182,Tumeur maligne du côlon ascendant
+f5d53c377782deafa729735b99b0aaea0a55543d,DAS,E1190,"Diabète sucré de type 2 insulinotraité, sans complication"
+ae73a7603e1198f5451a3fd046dcb765b4e6d883,DP,H268,Autres cataractes précisées
+ae73a7603e1198f5451a3fd046dcb765b4e6d883,DAS,E8718,"Hypoosmolarités et hyponatrémies, autres et sans précision"
+ae73a7603e1198f5451a3fd046dcb765b4e6d883,DAS,E8768,"Hypokaliémies, autres et sans précision"
+ae73a7603e1198f5451a3fd046dcb765b4e6d883,DAS,I482,Fibrillation auriculaire chronique [permanente]
+ae73a7603e1198f5451a3fd046dcb765b4e6d883,DAS,E559,"Carence en vitamine D, sans précision"
+c7cfce7bd648711275419c3c78b02416dd23aa24,DP,C183,Tumeur maligne de l'angle droit du côlon
+c7cfce7bd648711275419c3c78b02416dd23aa24,DAS,C780,Tumeur maligne secondaire du poumon
+e9955140740e105402a168b56c10a5f3356fcc92,DP,D124,Tumeur bénigne du côlon descendant
+e9955140740e105402a168b56c10a5f3356fcc92,DAS,E1190,"Diabète sucré de type 2 insulinotraité, sans complication"
+e9955140740e105402a168b56c10a5f3356fcc92,DAS,G473,Apnée du sommeil
+e9955140740e105402a168b56c10a5f3356fcc92,DAS,C780,Tumeur maligne secondaire du poumon
+e9955140740e105402a168b56c10a5f3356fcc92,DAS,E43,"Malnutrition protéino-énergétique grave, sans précision"
+e9955140740e105402a168b56c10a5f3356fcc92,DAS,R410,"Désorientation, sans précision"
+e9955140740e105402a168b56c10a5f3356fcc92,DAS,E8768,"Hypokaliémies, autres et sans précision"
+62cb456949772a1eec141843f7702d28b4e13032,DP,I5000,"Insuffisance cardiaque congestive, avec fraction d'éjection ventriculaire gauche [FEVG] supérieure ou égale à 50"
+1896bfd75d235e3c951da12520fa0e443ff33381,DP,R104,"Douleurs abdominales, autres et non précisées"
+1896bfd75d235e3c951da12520fa0e443ff33381,DAS,N185,"Maladie rénale chronique, stade 5"
+1896bfd75d235e3c951da12520fa0e443ff33381,DAS,E1190,"Diabète sucré de type 2 insulinotraité, sans complication"
+1896bfd75d235e3c951da12520fa0e443ff33381,DAS,I482,Fibrillation auriculaire chronique [permanente]
+1896bfd75d235e3c951da12520fa0e443ff33381,DAS,E8718,"Hypoosmolarités et hyponatrémies, autres et sans précision"
+e77d5f9007eff6126c2826237ed7ba6da0bd230f,DR,C795,Tumeur maligne secondaire des os et de la moelle osseuse
+e77d5f9007eff6126c2826237ed7ba6da0bd230f,DP,Z511,Séance de chimiothérapie pour tumeur
+e77d5f9007eff6126c2826237ed7ba6da0bd230f,DAS,E8718,"Hypoosmolarités et hyponatrémies, autres et sans précision"
+e77d5f9007eff6126c2826237ed7ba6da0bd230f,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+e77d5f9007eff6126c2826237ed7ba6da0bd230f,DAS,I10,Hypertension essentielle (primitive)
+16caae4637b268bb7330858d3e92f13474f7c63e,DP,F1023,"Syndrome de dépendance à l'alcool, personne actuellement abstinente, mais prenant des médicaments aversifs ou bloquants"
+16caae4637b268bb7330858d3e92f13474f7c63e,DAS,N185,"Maladie rénale chronique, stade 5"
+c58f2e5499e6e20d083669f8e373fef1c0039b11,DR,C509,"Tumeur maligne du sein, sans précision"
+c58f2e5499e6e20d083669f8e373fef1c0039b11,DP,Z5101,Séance de radiothérapie
+c58f2e5499e6e20d083669f8e373fef1c0039b11,DAS,E559,"Carence en vitamine D, sans précision"
+c58f2e5499e6e20d083669f8e373fef1c0039b11,DAS,E8718,"Hypoosmolarités et hyponatrémies, autres et sans précision"
+c58f2e5499e6e20d083669f8e373fef1c0039b11,DAS,E8768,"Hypokaliémies, autres et sans précision"
+67594b1cfb6939ede85433a21f594b3f528f649a,DP,F1030,"Syndrome de sevrage de l'alcool, sans complication"
+67594b1cfb6939ede85433a21f594b3f528f649a,DAS,G473,Apnée du sommeil
+72e36745330f120fe008a49c5698bf1ca3266b7e,DP,H258,Autres cataractes séniles
+72e36745330f120fe008a49c5698bf1ca3266b7e,DAS,I482,Fibrillation auriculaire chronique [permanente]
+72e36745330f120fe008a49c5698bf1ca3266b7e,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+72e36745330f120fe008a49c5698bf1ca3266b7e,DAS,E1190,"Diabète sucré de type 2 insulinotraité, sans complication"
+72e36745330f120fe008a49c5698bf1ca3266b7e,DAS,C787,Tumeur maligne secondaire du foie et des voies biliaires intrahépatiques
+72e36745330f120fe008a49c5698bf1ca3266b7e,DAS,C795,Tumeur maligne secondaire des os et de la moelle osseuse
+9ee2cbd8ec590606a63d710e491def23ba9ff1a9,DP,F1006,"Troubles mentaux et du comportement dus à une intoxication aigüe par l'alcool, avec convulsions"
+9ee2cbd8ec590606a63d710e491def23ba9ff1a9,DAS,N185,"Maladie rénale chronique, stade 5"
+9ee2cbd8ec590606a63d710e491def23ba9ff1a9,DAS,I10,Hypertension essentielle (primitive)
+9ee2cbd8ec590606a63d710e491def23ba9ff1a9,DAS,C787,Tumeur maligne secondaire du foie et des voies biliaires intrahépatiques
+9ee2cbd8ec590606a63d710e491def23ba9ff1a9,DAS,E559,"Carence en vitamine D, sans précision"
+9ee2cbd8ec590606a63d710e491def23ba9ff1a9,DAS,E1190,"Diabète sucré de type 2 insulinotraité, sans complication"
+9ee2cbd8ec590606a63d710e491def23ba9ff1a9,DAS,I255,Myocardiopathie ischémique
+9ee2cbd8ec590606a63d710e491def23ba9ff1a9,DAS,E8768,"Hypokaliémies, autres et sans précision"
+55dc02492371637b65ce1d86671b690f2f799e93,DP,D121,Tumeur bénigne de l'appendice
+55dc02492371637b65ce1d86671b690f2f799e93,DAS,I482,Fibrillation auriculaire chronique [permanente]
+55dc02492371637b65ce1d86671b690f2f799e93,DAS,R33,Rétention d'urine
+55dc02492371637b65ce1d86671b690f2f799e93,DAS,N185,"Maladie rénale chronique, stade 5"
+55dc02492371637b65ce1d86671b690f2f799e93,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+d93114969de4f9fcac3aca5f4498baec15494214,DP,F10240,"Syndrome de dépendance à l'alcool, utilisation actuelle, sans symptôme physique"
+d93114969de4f9fcac3aca5f4498baec15494214,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+d93114969de4f9fcac3aca5f4498baec15494214,DAS,I10,Hypertension essentielle (primitive)
+d93114969de4f9fcac3aca5f4498baec15494214,DAS,E8768,"Hypokaliémies, autres et sans précision"
+d93114969de4f9fcac3aca5f4498baec15494214,DAS,E43,"Malnutrition protéino-énergétique grave, sans précision"
+d93114969de4f9fcac3aca5f4498baec15494214,DAS,R410,"Désorientation, sans précision"
+c97ace637a02400040545aa85106f469cbea1850,DP,K509,"Maladie de Crohn, sans précision"
+c97ace637a02400040545aa85106f469cbea1850,DAS,I482,Fibrillation auriculaire chronique [permanente]
+c97ace637a02400040545aa85106f469cbea1850,DAS,R410,"Désorientation, sans précision"
+c97ace637a02400040545aa85106f469cbea1850,DAS,C787,Tumeur maligne secondaire du foie et des voies biliaires intrahépatiques
+4298921e127a933f7c43f203d8f159a66eac8b1c,DP,C254,Tumeur maligne du pancréas endocrine
+4298921e127a933f7c43f203d8f159a66eac8b1c,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+4298921e127a933f7c43f203d8f159a66eac8b1c,DAS,E8718,"Hypoosmolarités et hyponatrémies, autres et sans précision"
+4298921e127a933f7c43f203d8f159a66eac8b1c,DAS,G473,Apnée du sommeil
+4298921e127a933f7c43f203d8f159a66eac8b1c,DAS,C780,Tumeur maligne secondaire du poumon
+4298921e127a933f7c43f203d8f159a66eac8b1c,DAS,E8768,"Hypokaliémies, autres et sans précision"
+4298921e127a933f7c43f203d8f159a66eac8b1c,DAS,C787,Tumeur maligne secondaire du foie et des voies biliaires intrahépatiques
+4298921e127a933f7c43f203d8f159a66eac8b1c,DAS,I10,Hypertension essentielle (primitive)
+66c2b0da0e5175c27e70c05afd9d698a6bf2f8fb,DP,C251,Tumeur maligne du corps du pancréas
+66c2b0da0e5175c27e70c05afd9d698a6bf2f8fb,DAS,I482,Fibrillation auriculaire chronique [permanente]
+66c2b0da0e5175c27e70c05afd9d698a6bf2f8fb,DAS,G473,Apnée du sommeil
+66c2b0da0e5175c27e70c05afd9d698a6bf2f8fb,DAS,N185,"Maladie rénale chronique, stade 5"
+66c2b0da0e5175c27e70c05afd9d698a6bf2f8fb,DAS,C795,Tumeur maligne secondaire des os et de la moelle osseuse
+66c2b0da0e5175c27e70c05afd9d698a6bf2f8fb,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+0fc7ff021b20e8e014dce7126af3d689e9c00c02,DR,C441,"Tumeur maligne de la peau de la paupière, y compris le canthus"
+0fc7ff021b20e8e014dce7126af3d689e9c00c02,DP,Z511,Séance de chimiothérapie pour tumeur
+0fc7ff021b20e8e014dce7126af3d689e9c00c02,DAS,E8718,"Hypoosmolarités et hyponatrémies, autres et sans précision"
+0fc7ff021b20e8e014dce7126af3d689e9c00c02,DAS,N185,"Maladie rénale chronique, stade 5"
+0fc7ff021b20e8e014dce7126af3d689e9c00c02,DAS,R410,"Désorientation, sans précision"
+0fc7ff021b20e8e014dce7126af3d689e9c00c02,DAS,R33,Rétention d'urine
+0fc7ff021b20e8e014dce7126af3d689e9c00c02,DAS,I255,Myocardiopathie ischémique
+0fc7ff021b20e8e014dce7126af3d689e9c00c02,DAS,C787,Tumeur maligne secondaire du foie et des voies biliaires intrahépatiques
+7f4126c8ad631c3721a22579b8d65539be9f4ae0,DP,I250,"Athérosclérose cardio-vasculaire, décrite ainsi"
+7f4126c8ad631c3721a22579b8d65539be9f4ae0,DAS,I10,Hypertension essentielle (primitive)
+7f4126c8ad631c3721a22579b8d65539be9f4ae0,DAS,C780,Tumeur maligne secondaire du poumon
+7f4126c8ad631c3721a22579b8d65539be9f4ae0,DAS,I255,Myocardiopathie ischémique
+7f4126c8ad631c3721a22579b8d65539be9f4ae0,DAS,E8768,"Hypokaliémies, autres et sans précision"
+7f4126c8ad631c3721a22579b8d65539be9f4ae0,DAS,E43,"Malnutrition protéino-énergétique grave, sans précision"
+7f4126c8ad631c3721a22579b8d65539be9f4ae0,DAS,E8718,"Hypoosmolarités et hyponatrémies, autres et sans précision"
+9f489ef106e14aa780e064a10ddf5ad002c56240,DP,F1052,"Trouble psychotique avec hallucinations au premier plan, dû à l'alcool"
+9f489ef106e14aa780e064a10ddf5ad002c56240,DAS,C795,Tumeur maligne secondaire des os et de la moelle osseuse
+9f489ef106e14aa780e064a10ddf5ad002c56240,DAS,C787,Tumeur maligne secondaire du foie et des voies biliaires intrahépatiques
+9f489ef106e14aa780e064a10ddf5ad002c56240,DAS,I255,Myocardiopathie ischémique
+9f489ef106e14aa780e064a10ddf5ad002c56240,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+ebbc7252bb26673f428aee4373a87a1eca110296,DR,C901,Leucémie à plasmocytes
+ebbc7252bb26673f428aee4373a87a1eca110296,DP,Z511,Séance de chimiothérapie pour tumeur
+ebbc7252bb26673f428aee4373a87a1eca110296,DAS,I255,Myocardiopathie ischémique
+ebbc7252bb26673f428aee4373a87a1eca110296,DAS,E8768,"Hypokaliémies, autres et sans précision"
+447ba9820896ae7b206809ca5c295477c65cfc24,DR,C349,"Tumeur maligne de bronche ou du poumon, sans précision"
+447ba9820896ae7b206809ca5c295477c65cfc24,DP,Z511,Séance de chimiothérapie pour tumeur
+447ba9820896ae7b206809ca5c295477c65cfc24,DAS,E8718,"Hypoosmolarités et hyponatrémies, autres et sans précision"
+447ba9820896ae7b206809ca5c295477c65cfc24,DAS,I255,Myocardiopathie ischémique
+6622ad25c74dfdc021928aba619492bf4cdc765b,DP,K500,Maladie de Crohn de l'intestin grêle
+6622ad25c74dfdc021928aba619492bf4cdc765b,DAS,E43,"Malnutrition protéino-énergétique grave, sans précision"
+6622ad25c74dfdc021928aba619492bf4cdc765b,DAS,R33,Rétention d'urine
+6622ad25c74dfdc021928aba619492bf4cdc765b,DAS,G473,Apnée du sommeil
+6622ad25c74dfdc021928aba619492bf4cdc765b,DAS,E8718,"Hypoosmolarités et hyponatrémies, autres et sans précision"
+c452dd34fbdc2c11704277cbcd38c056e1852fa0,DR,C796,Tumeur maligne secondaire de l'ovaire
+c452dd34fbdc2c11704277cbcd38c056e1852fa0,DP,Z5101,Séance de radiothérapie
+c452dd34fbdc2c11704277cbcd38c056e1852fa0,DAS,C795,Tumeur maligne secondaire des os et de la moelle osseuse
+d59a3f92693256834887a5d3fd9ccbc4c01c3931,DP,K290,Gastrite hémorragique aiguë
+d59a3f92693256834887a5d3fd9ccbc4c01c3931,DAS,E8768,"Hypokaliémies, autres et sans précision"
+3ea0013f170948aa46b0a5dbb70d84a3b6febf61,DP,C442,Tumeur maligne de la peau de l'oreille et du conduit auditif externe
+3ea0013f170948aa46b0a5dbb70d84a3b6febf61,DAS,R410,"Désorientation, sans précision"
+3ea0013f170948aa46b0a5dbb70d84a3b6febf61,DAS,E559,"Carence en vitamine D, sans précision"
+3ea0013f170948aa46b0a5dbb70d84a3b6febf61,DAS,R33,Rétention d'urine
+3ea0013f170948aa46b0a5dbb70d84a3b6febf61,DAS,C795,Tumeur maligne secondaire des os et de la moelle osseuse
+c236bbc4565dcb9af0d7bd4880a37d06329db3f0,DP,F10201,"Syndrome de dépendance à l'alcool, personne actuellement abstinente en rémission partielle"
+c236bbc4565dcb9af0d7bd4880a37d06329db3f0,DAS,E8718,"Hypoosmolarités et hyponatrémies, autres et sans précision"
+c236bbc4565dcb9af0d7bd4880a37d06329db3f0,DAS,C780,Tumeur maligne secondaire du poumon
+c236bbc4565dcb9af0d7bd4880a37d06329db3f0,DAS,G473,Apnée du sommeil
+c236bbc4565dcb9af0d7bd4880a37d06329db3f0,DAS,E8768,"Hypokaliémies, autres et sans précision"
+c236bbc4565dcb9af0d7bd4880a37d06329db3f0,DAS,C795,Tumeur maligne secondaire des os et de la moelle osseuse
+0c2755411c10c08dfb17150b09793ac5e5b91007,DP,R104,"Douleurs abdominales, autres et non précisées"
+0c2755411c10c08dfb17150b09793ac5e5b91007,DAS,E1190,"Diabète sucré de type 2 insulinotraité, sans complication"
+0c2755411c10c08dfb17150b09793ac5e5b91007,DAS,R33,Rétention d'urine
+0c2755411c10c08dfb17150b09793ac5e5b91007,DAS,E43,"Malnutrition protéino-énergétique grave, sans précision"
+0c2755411c10c08dfb17150b09793ac5e5b91007,DAS,I10,Hypertension essentielle (primitive)
+0c2755411c10c08dfb17150b09793ac5e5b91007,DAS,G473,Apnée du sommeil
+140334b2f37809c0b61149ca4010f72460e23e58,DP,K508,Autres formes de la maladie de Crohn
+140334b2f37809c0b61149ca4010f72460e23e58,DAS,E8768,"Hypokaliémies, autres et sans précision"
+140334b2f37809c0b61149ca4010f72460e23e58,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+140334b2f37809c0b61149ca4010f72460e23e58,DAS,I482,Fibrillation auriculaire chronique [permanente]
+140334b2f37809c0b61149ca4010f72460e23e58,DAS,I255,Myocardiopathie ischémique
+140334b2f37809c0b61149ca4010f72460e23e58,DAS,G473,Apnée du sommeil
+140334b2f37809c0b61149ca4010f72460e23e58,DAS,E8718,"Hypoosmolarités et hyponatrémies, autres et sans précision"
+cdd2dc591d7306565853008066d37c01f7a938a6,DP,I509,"Insuffisance cardiaque, sans précision"
+cdd2dc591d7306565853008066d37c01f7a938a6,DAS,I482,Fibrillation auriculaire chronique [permanente]
+cdd2dc591d7306565853008066d37c01f7a938a6,DAS,C787,Tumeur maligne secondaire du foie et des voies biliaires intrahépatiques
+ab967e5ba5c2dd65e0f9e7b4c2a7e04e852f1f53,DP,F1025,"Syndrome de dépendance à l'alcool, utilisation continue"
+48137e3eeed7a484e0ed2a9681aaa7ed6fe85d16,DP,D123,Tumeur bénigne du côlon transverse
+48137e3eeed7a484e0ed2a9681aaa7ed6fe85d16,DAS,R33,Rétention d'urine
+48137e3eeed7a484e0ed2a9681aaa7ed6fe85d16,DAS,I255,Myocardiopathie ischémique
+1db5dbe6e321342860866ee869646224c5ff3228,DR,C258,Tumeur maligne à localisations contiguës du pancréas
+1db5dbe6e321342860866ee869646224c5ff3228,DP,Z511,Séance de chimiothérapie pour tumeur
+1db5dbe6e321342860866ee869646224c5ff3228,DAS,I482,Fibrillation auriculaire chronique [permanente]
+03a8d5b0d41e0d85cde47e020a51fbf95d1397de,DP,K630,Abcès de l'intestin
+03a8d5b0d41e0d85cde47e020a51fbf95d1397de,DAS,G473,Apnée du sommeil
+03a8d5b0d41e0d85cde47e020a51fbf95d1397de,DAS,E1190,"Diabète sucré de type 2 insulinotraité, sans complication"
+3b3414e8191a36686b45d1824c9f9e36f2b8564f,DP,H264,Séquelles de cataracte
+3b3414e8191a36686b45d1824c9f9e36f2b8564f,DAS,C780,Tumeur maligne secondaire du poumon
+a075344c40593f63fdddea6b64b411ee66e8a0fb,DP,K570,"Diverticulose de l'intestin grêle, avec perforation et abcès"
+a075344c40593f63fdddea6b64b411ee66e8a0fb,DAS,I482,Fibrillation auriculaire chronique [permanente]
+a075344c40593f63fdddea6b64b411ee66e8a0fb,DAS,R33,Rétention d'urine
+a075344c40593f63fdddea6b64b411ee66e8a0fb,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+a075344c40593f63fdddea6b64b411ee66e8a0fb,DAS,I255,Myocardiopathie ischémique
+38d623c70e7caebf336166b05eeb094ba73cbd8b,DP,F1072,"Trouble thymique résiduel ou de survenue tardive, dû à l'alcool"
+38d623c70e7caebf336166b05eeb094ba73cbd8b,DAS,C787,Tumeur maligne secondaire du foie et des voies biliaires intrahépatiques
+38d623c70e7caebf336166b05eeb094ba73cbd8b,DAS,I10,Hypertension essentielle (primitive)
+38d623c70e7caebf336166b05eeb094ba73cbd8b,DAS,I255,Myocardiopathie ischémique
+38d623c70e7caebf336166b05eeb094ba73cbd8b,DAS,E8718,"Hypoosmolarités et hyponatrémies, autres et sans précision"
+38d623c70e7caebf336166b05eeb094ba73cbd8b,DAS,R33,Rétention d'urine
+5bdd2a121743744b2b216d31404d88ef9b478032,DP,F1073,"Démence, due à l'alcool"
+1501fc24f5ced9de47aefe76d2d6005223175516,DP,I481,Fibrillation auriculaire persistante
+a75ac7d5befc58a105736658f45d5d251b9f0bfc,DR,C673,Tumeur maligne de la paroi antérieure de la vessie
+a75ac7d5befc58a105736658f45d5d251b9f0bfc,DP,Z5101,Séance de radiothérapie
+a75ac7d5befc58a105736658f45d5d251b9f0bfc,DAS,R410,"Désorientation, sans précision"
+a75ac7d5befc58a105736658f45d5d251b9f0bfc,DAS,C795,Tumeur maligne secondaire des os et de la moelle osseuse
+a75ac7d5befc58a105736658f45d5d251b9f0bfc,DAS,C780,Tumeur maligne secondaire du poumon
+a75ac7d5befc58a105736658f45d5d251b9f0bfc,DAS,E43,"Malnutrition protéino-énergétique grave, sans précision"
+a75ac7d5befc58a105736658f45d5d251b9f0bfc,DAS,I482,Fibrillation auriculaire chronique [permanente]
+a75ac7d5befc58a105736658f45d5d251b9f0bfc,DAS,I255,Myocardiopathie ischémique
+48c5588668faa5298944be924dc1205cc1f93f30,DR,C186,Tumeur maligne du côlon descendant
+48c5588668faa5298944be924dc1205cc1f93f30,DP,Z511,Séance de chimiothérapie pour tumeur
+48c5588668faa5298944be924dc1205cc1f93f30,DAS,E43,"Malnutrition protéino-énergétique grave, sans précision"
+48c5588668faa5298944be924dc1205cc1f93f30,DAS,I255,Myocardiopathie ischémique
+9021fa12bd12460895a2e5521f34673e01bea980,DP,H269,"Cataracte, sans précision"
+9021fa12bd12460895a2e5521f34673e01bea980,DAS,G473,Apnée du sommeil
+9021fa12bd12460895a2e5521f34673e01bea980,DAS,N185,"Maladie rénale chronique, stade 5"
+9021fa12bd12460895a2e5521f34673e01bea980,DAS,I10,Hypertension essentielle (primitive)
+9021fa12bd12460895a2e5521f34673e01bea980,DAS,I255,Myocardiopathie ischémique
+9021fa12bd12460895a2e5521f34673e01bea980,DAS,C787,Tumeur maligne secondaire du foie et des voies biliaires intrahépatiques
+9021fa12bd12460895a2e5521f34673e01bea980,DAS,I482,Fibrillation auriculaire chronique [permanente]
+9021fa12bd12460895a2e5521f34673e01bea980,DAS,E559,"Carence en vitamine D, sans précision"
+cb72eed0e202532b68c325d0196ed3ff0c0e2253,DP,D122,Tumeur bénigne du côlon ascendant
+cb72eed0e202532b68c325d0196ed3ff0c0e2253,DAS,I255,Myocardiopathie ischémique
+d55d0127956d08862b52d64e3cdfc2b5071be6f2,DP,F10202,"Syndrome de dépendance à l'alcool, personne actuellement abstinente en rémission complète"
+e3ba2194c93be7a6af50a2bfc240af3ba8cc57e7,DP,I252,"Infarctus du myocarde, ancien"
+e3ba2194c93be7a6af50a2bfc240af3ba8cc57e7,DAS,G473,Apnée du sommeil
+e3ba2194c93be7a6af50a2bfc240af3ba8cc57e7,DAS,I255,Myocardiopathie ischémique
+e3ba2194c93be7a6af50a2bfc240af3ba8cc57e7,DAS,R33,Rétention d'urine
+e3ba2194c93be7a6af50a2bfc240af3ba8cc57e7,DAS,E43,"Malnutrition protéino-énergétique grave, sans précision"
+e3ba2194c93be7a6af50a2bfc240af3ba8cc57e7,DAS,C787,Tumeur maligne secondaire du foie et des voies biliaires intrahépatiques
+5a53ca3766050812d93b058756f33bee017d240e,DP,K293,Gastrite chronique superficielle
+5a53ca3766050812d93b058756f33bee017d240e,DAS,E8718,"Hypoosmolarités et hyponatrémies, autres et sans précision"
+5a53ca3766050812d93b058756f33bee017d240e,DAS,E1190,"Diabète sucré de type 2 insulinotraité, sans complication"
+5a53ca3766050812d93b058756f33bee017d240e,DAS,C795,Tumeur maligne secondaire des os et de la moelle osseuse
+5a53ca3766050812d93b058756f33bee017d240e,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+5a53ca3766050812d93b058756f33bee017d240e,DAS,N185,"Maladie rénale chronique, stade 5"
+ab269d21a0613f3676f9c355fd5c640aca32669f,DP,F10201,"Syndrome de dépendance à l'alcool, personne actuellement abstinente en rémission partielle"
+ab269d21a0613f3676f9c355fd5c640aca32669f,DAS,I255,Myocardiopathie ischémique
+ab269d21a0613f3676f9c355fd5c640aca32669f,DAS,E43,"Malnutrition protéino-énergétique grave, sans précision"
+ab269d21a0613f3676f9c355fd5c640aca32669f,DAS,I10,Hypertension essentielle (primitive)
+ab269d21a0613f3676f9c355fd5c640aca32669f,DAS,R410,"Désorientation, sans précision"
+ab269d21a0613f3676f9c355fd5c640aca32669f,DAS,C795,Tumeur maligne secondaire des os et de la moelle osseuse
+ab269d21a0613f3676f9c355fd5c640aca32669f,DAS,N185,"Maladie rénale chronique, stade 5"
+ab269d21a0613f3676f9c355fd5c640aca32669f,DAS,E8768,"Hypokaliémies, autres et sans précision"
+8c536009da4c9802a0c7f94d14195790bcab9c3d,DR,C674,Tumeur maligne de la paroi postérieure de la vessie
+8c536009da4c9802a0c7f94d14195790bcab9c3d,DP,Z511,Séance de chimiothérapie pour tumeur
+3d80232b8bf05a8eddc5bbdef891a49fb13f2f37,DP,H258,Autres cataractes séniles
+3d80232b8bf05a8eddc5bbdef891a49fb13f2f37,DAS,E8718,"Hypoosmolarités et hyponatrémies, autres et sans précision"
+e097d09a945f02b626543e3f6529dba84877af87,DP,D500,Anémie par carence en fer secondaire à une perte de sang (chronique)
+e097d09a945f02b626543e3f6529dba84877af87,DAS,I255,Myocardiopathie ischémique
+e097d09a945f02b626543e3f6529dba84877af87,DAS,E8718,"Hypoosmolarités et hyponatrémies, autres et sans précision"
+e097d09a945f02b626543e3f6529dba84877af87,DAS,E1190,"Diabète sucré de type 2 insulinotraité, sans complication"
+9d2f5d5402185f114d64049e5c220100a9da7cb0,DP,F1004,"Troubles mentaux et du comportement dus à une intoxication aigüe par l'alcool, avec distorsion des perceptions"
+98c5b1f0123a40cbfb44065f6a8a871e9bae526e,DR,C675,Tumeur maligne du col vésical
+98c5b1f0123a40cbfb44065f6a8a871e9bae526e,DP,Z5101,Séance de radiothérapie
+98c5b1f0123a40cbfb44065f6a8a871e9bae526e,DAS,I482,Fibrillation auriculaire chronique [permanente]
+39b938aad4d7a0a8eb03156053cfd3d7704d4d5c,DP,F1054,"Trouble psychotique avec symptômes dépressifs au premier plan, dû à l'alcool"
+39b938aad4d7a0a8eb03156053cfd3d7704d4d5c,DAS,G473,Apnée du sommeil
+39b938aad4d7a0a8eb03156053cfd3d7704d4d5c,DAS,E43,"Malnutrition protéino-énergétique grave, sans précision"
+39b938aad4d7a0a8eb03156053cfd3d7704d4d5c,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+39b938aad4d7a0a8eb03156053cfd3d7704d4d5c,DAS,R33,Rétention d'urine
+39b938aad4d7a0a8eb03156053cfd3d7704d4d5c,DAS,R410,"Désorientation, sans précision"
+39b938aad4d7a0a8eb03156053cfd3d7704d4d5c,DAS,E1190,"Diabète sucré de type 2 insulinotraité, sans complication"
+204d68e4b045d57cc4bc02b1b5b323225d3332bc,DP,K292,Gastrite alcoolique
+204d68e4b045d57cc4bc02b1b5b323225d3332bc,DAS,C795,Tumeur maligne secondaire des os et de la moelle osseuse
+204d68e4b045d57cc4bc02b1b5b323225d3332bc,DAS,C787,Tumeur maligne secondaire du foie et des voies biliaires intrahépatiques
+204d68e4b045d57cc4bc02b1b5b323225d3332bc,DAS,I255,Myocardiopathie ischémique
+1c2d59686e3a5b032a193fa7586f74bd9a1be272,DP,F10200,"Syndrome de dépendance à l'alcool, personne actuellement abstinente en rémission récente"
+1c2d59686e3a5b032a193fa7586f74bd9a1be272,DAS,C787,Tumeur maligne secondaire du foie et des voies biliaires intrahépatiques
+1c2d59686e3a5b032a193fa7586f74bd9a1be272,DAS,C795,Tumeur maligne secondaire des os et de la moelle osseuse
+1c2d59686e3a5b032a193fa7586f74bd9a1be272,DAS,E43,"Malnutrition protéino-énergétique grave, sans précision"
+1c2d59686e3a5b032a193fa7586f74bd9a1be272,DAS,C780,Tumeur maligne secondaire du poumon
+1c2d59686e3a5b032a193fa7586f74bd9a1be272,DAS,I255,Myocardiopathie ischémique
+1c2d59686e3a5b032a193fa7586f74bd9a1be272,DAS,R410,"Désorientation, sans précision"
+1c2d59686e3a5b032a193fa7586f74bd9a1be272,DAS,G473,Apnée du sommeil
+d6f28c9d734514f2e84b9ff5ac69d162ea16863d,DP,K295,"Gastrite chronique, sans précision"
+9cfbf3327cde9773627d78b0c72462aa9a90aecc,DP,D126+3,Polypose (colique) festonnée
+9cfbf3327cde9773627d78b0c72462aa9a90aecc,DAS,I10,Hypertension essentielle (primitive)
+9cfbf3327cde9773627d78b0c72462aa9a90aecc,DAS,R33,Rétention d'urine
+e9a14f695e28b4f83f972141aaa6239c1894a294,DP,K293,Gastrite chronique superficielle
+832c9a3ff739a433bee7bc7a3d45ba98d6cc00e5,DP,C348,Tumeur maligne à localisations contiguës des bronches et du poumon
+832c9a3ff739a433bee7bc7a3d45ba98d6cc00e5,DAS,I482,Fibrillation auriculaire chronique [permanente]
+b191c08ddf33cd15460fcb9ce59d672252fe970a,DP,C442,Tumeur maligne de la peau de l'oreille et du conduit auditif externe
+b191c08ddf33cd15460fcb9ce59d672252fe970a,DAS,E1190,"Diabète sucré de type 2 insulinotraité, sans complication"
+b191c08ddf33cd15460fcb9ce59d672252fe970a,DAS,C787,Tumeur maligne secondaire du foie et des voies biliaires intrahépatiques
+b191c08ddf33cd15460fcb9ce59d672252fe970a,DAS,E43,"Malnutrition protéino-énergétique grave, sans précision"
+b191c08ddf33cd15460fcb9ce59d672252fe970a,DAS,N185,"Maladie rénale chronique, stade 5"
+b191c08ddf33cd15460fcb9ce59d672252fe970a,DAS,E8718,"Hypoosmolarités et hyponatrémies, autres et sans précision"
+b191c08ddf33cd15460fcb9ce59d672252fe970a,DAS,C780,Tumeur maligne secondaire du poumon
+782c6c8f001ee2bde05d0b94cd352154e37d9961,DP,R100,Syndrome abdominal aigu
+e60f0879a84b59f94ebcb1eaf095ebaebd2c081d,DP,I481,Fibrillation auriculaire persistante
+e60f0879a84b59f94ebcb1eaf095ebaebd2c081d,DAS,E1190,"Diabète sucré de type 2 insulinotraité, sans complication"
+e60f0879a84b59f94ebcb1eaf095ebaebd2c081d,DAS,G473,Apnée du sommeil
+e60f0879a84b59f94ebcb1eaf095ebaebd2c081d,DAS,N185,"Maladie rénale chronique, stade 5"
+e60f0879a84b59f94ebcb1eaf095ebaebd2c081d,DAS,E43,"Malnutrition protéino-énergétique grave, sans précision"
+d263f39ac8480e858db1d9e601d52edcf95f5cb8,DR,C509,"Tumeur maligne du sein, sans précision"
+d263f39ac8480e858db1d9e601d52edcf95f5cb8,DP,Z5101,Séance de radiothérapie
+d263f39ac8480e858db1d9e601d52edcf95f5cb8,DAS,C780,Tumeur maligne secondaire du poumon
+d263f39ac8480e858db1d9e601d52edcf95f5cb8,DAS,E43,"Malnutrition protéino-énergétique grave, sans précision"
+d263f39ac8480e858db1d9e601d52edcf95f5cb8,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+17eb1982aec9935b390065a55fef75d5367c18ef,DR,C903,Plasmocytome solitaire
+17eb1982aec9935b390065a55fef75d5367c18ef,DP,Z5101,Séance de radiothérapie
+17eb1982aec9935b390065a55fef75d5367c18ef,DAS,E8768,"Hypokaliémies, autres et sans précision"
+d4adbd8b2cf196eefcada805ee1601aafe3f88a6,DP,C793,Tumeur maligne secondaire du cerveau et des méninges cérébrales
+d4adbd8b2cf196eefcada805ee1601aafe3f88a6,DAS,G473,Apnée du sommeil
+9335f26b6f0743ef64cf9bfa09e78f38b5a44942,DP,R102,Douleur pelvienne et périnéale
+9335f26b6f0743ef64cf9bfa09e78f38b5a44942,DAS,E8768,"Hypokaliémies, autres et sans précision"
+9335f26b6f0743ef64cf9bfa09e78f38b5a44942,DAS,I482,Fibrillation auriculaire chronique [permanente]
+9335f26b6f0743ef64cf9bfa09e78f38b5a44942,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+9335f26b6f0743ef64cf9bfa09e78f38b5a44942,DAS,R410,"Désorientation, sans précision"
+9335f26b6f0743ef64cf9bfa09e78f38b5a44942,DAS,N185,"Maladie rénale chronique, stade 5"
+9335f26b6f0743ef64cf9bfa09e78f38b5a44942,DAS,R33,Rétention d'urine
+72529762ee7630834f6bb26614ecd301a4b78233,DP,F1023,"Syndrome de dépendance à l'alcool, personne actuellement abstinente, mais prenant des médicaments aversifs ou bloquants"
+72529762ee7630834f6bb26614ecd301a4b78233,DAS,C780,Tumeur maligne secondaire du poumon
+216c074d9566dcabf6adeb84e9c0b7aae30927fa,DP,C449,"Tumeur maligne de la peau, sans précision"
+216c074d9566dcabf6adeb84e9c0b7aae30927fa,DAS,E8768,"Hypokaliémies, autres et sans précision"
+216c074d9566dcabf6adeb84e9c0b7aae30927fa,DAS,I482,Fibrillation auriculaire chronique [permanente]
+216c074d9566dcabf6adeb84e9c0b7aae30927fa,DAS,N185,"Maladie rénale chronique, stade 5"
+216c074d9566dcabf6adeb84e9c0b7aae30927fa,DAS,G473,Apnée du sommeil
+216c074d9566dcabf6adeb84e9c0b7aae30927fa,DAS,C795,Tumeur maligne secondaire des os et de la moelle osseuse
+eabc7628da0361e1f6b2b7a0ce6df0583595d61e,DP,K293,Gastrite chronique superficielle
+eabc7628da0361e1f6b2b7a0ce6df0583595d61e,DAS,R33,Rétention d'urine
+eabc7628da0361e1f6b2b7a0ce6df0583595d61e,DAS,I482,Fibrillation auriculaire chronique [permanente]
+eabc7628da0361e1f6b2b7a0ce6df0583595d61e,DAS,R410,"Désorientation, sans précision"
+eabc7628da0361e1f6b2b7a0ce6df0583595d61e,DAS,E43,"Malnutrition protéino-énergétique grave, sans précision"
+eabc7628da0361e1f6b2b7a0ce6df0583595d61e,DAS,E8718,"Hypoosmolarités et hyponatrémies, autres et sans précision"
+fdb5be966ca77f66d17a1e54c39e99d2196540b3,DP,K575,"Diverticulose du côlon et de l'intestin grêle, (sans perforation ni abcès)"
+fdb5be966ca77f66d17a1e54c39e99d2196540b3,DAS,C795,Tumeur maligne secondaire des os et de la moelle osseuse
+fdb5be966ca77f66d17a1e54c39e99d2196540b3,DAS,N185,"Maladie rénale chronique, stade 5"
+fdb5be966ca77f66d17a1e54c39e99d2196540b3,DAS,R410,"Désorientation, sans précision"
+fdb5be966ca77f66d17a1e54c39e99d2196540b3,DAS,I10,Hypertension essentielle (primitive)
+fdb5be966ca77f66d17a1e54c39e99d2196540b3,DAS,I255,Myocardiopathie ischémique
+fdb5be966ca77f66d17a1e54c39e99d2196540b3,DAS,E8768,"Hypokaliémies, autres et sans précision"
+fdb5be966ca77f66d17a1e54c39e99d2196540b3,DAS,I482,Fibrillation auriculaire chronique [permanente]
+10d5d8d19fc81d784428622db58651235790bf46,DP,F10240,"Syndrome de dépendance à l'alcool, utilisation actuelle, sans symptôme physique"
+10d5d8d19fc81d784428622db58651235790bf46,DAS,R410,"Désorientation, sans précision"
+10d5d8d19fc81d784428622db58651235790bf46,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+10d5d8d19fc81d784428622db58651235790bf46,DAS,N185,"Maladie rénale chronique, stade 5"
+10d5d8d19fc81d784428622db58651235790bf46,DAS,C787,Tumeur maligne secondaire du foie et des voies biliaires intrahépatiques
+10d5d8d19fc81d784428622db58651235790bf46,DAS,E559,"Carence en vitamine D, sans précision"
+10d5d8d19fc81d784428622db58651235790bf46,DAS,C780,Tumeur maligne secondaire du poumon
+10d5d8d19fc81d784428622db58651235790bf46,DAS,I255,Myocardiopathie ischémique
+6701e1051c92b11a6d0370c09997c0c2bed62471,DP,K500,Maladie de Crohn de l'intestin grêle
+6701e1051c92b11a6d0370c09997c0c2bed62471,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+6701e1051c92b11a6d0370c09997c0c2bed62471,DAS,I482,Fibrillation auriculaire chronique [permanente]
+6701e1051c92b11a6d0370c09997c0c2bed62471,DAS,E1190,"Diabète sucré de type 2 insulinotraité, sans complication"
+793df0195d7b3c87bdde3a5c9d8ad5350311de72,DP,C257,Tumeur maligne d'autres parties du pancréas
+793df0195d7b3c87bdde3a5c9d8ad5350311de72,DAS,C780,Tumeur maligne secondaire du poumon
+793df0195d7b3c87bdde3a5c9d8ad5350311de72,DAS,R33,Rétention d'urine
+793df0195d7b3c87bdde3a5c9d8ad5350311de72,DAS,I255,Myocardiopathie ischémique
+c4a2215e2026b2344df820efb0566cabd12ca684,DR,C182,Tumeur maligne du côlon ascendant
+c4a2215e2026b2344df820efb0566cabd12ca684,DP,Z511,Séance de chimiothérapie pour tumeur
+c4a2215e2026b2344df820efb0566cabd12ca684,DAS,C787,Tumeur maligne secondaire du foie et des voies biliaires intrahépatiques
+c4a2215e2026b2344df820efb0566cabd12ca684,DAS,I482,Fibrillation auriculaire chronique [permanente]
+c4a2215e2026b2344df820efb0566cabd12ca684,DAS,E1190,"Diabète sucré de type 2 insulinotraité, sans complication"
+4025d0d94bcde4572f327fe6fe5acb9cd1314bb0,DP,I483,Flutter auriculaire typique
+4025d0d94bcde4572f327fe6fe5acb9cd1314bb0,DAS,N185,"Maladie rénale chronique, stade 5"
+4025d0d94bcde4572f327fe6fe5acb9cd1314bb0,DAS,E8718,"Hypoosmolarités et hyponatrémies, autres et sans précision"
+4025d0d94bcde4572f327fe6fe5acb9cd1314bb0,DAS,I10,Hypertension essentielle (primitive)
+4025d0d94bcde4572f327fe6fe5acb9cd1314bb0,DAS,I255,Myocardiopathie ischémique
+4025d0d94bcde4572f327fe6fe5acb9cd1314bb0,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+4025d0d94bcde4572f327fe6fe5acb9cd1314bb0,DAS,E8768,"Hypokaliémies, autres et sans précision"
+4025d0d94bcde4572f327fe6fe5acb9cd1314bb0,DAS,C787,Tumeur maligne secondaire du foie et des voies biliaires intrahépatiques
+56d37dc8a6fd62bb34d18675c22024b65c18f0a7,DP,K508,Autres formes de la maladie de Crohn
+56d37dc8a6fd62bb34d18675c22024b65c18f0a7,DAS,E559,"Carence en vitamine D, sans précision"
+56d37dc8a6fd62bb34d18675c22024b65c18f0a7,DAS,E43,"Malnutrition protéino-énergétique grave, sans précision"
+56d37dc8a6fd62bb34d18675c22024b65c18f0a7,DAS,C787,Tumeur maligne secondaire du foie et des voies biliaires intrahépatiques
+56d37dc8a6fd62bb34d18675c22024b65c18f0a7,DAS,R410,"Désorientation, sans précision"
+56d37dc8a6fd62bb34d18675c22024b65c18f0a7,DAS,E1190,"Diabète sucré de type 2 insulinotraité, sans complication"
+56d37dc8a6fd62bb34d18675c22024b65c18f0a7,DAS,C780,Tumeur maligne secondaire du poumon
+8161077f1b27aa8bafbe113973fffae3d0903e54,DP,D128,Tumeur bénigne du rectum
+8161077f1b27aa8bafbe113973fffae3d0903e54,DAS,R410,"Désorientation, sans précision"
+8161077f1b27aa8bafbe113973fffae3d0903e54,DAS,E1190,"Diabète sucré de type 2 insulinotraité, sans complication"
+8161077f1b27aa8bafbe113973fffae3d0903e54,DAS,C780,Tumeur maligne secondaire du poumon
+57408ba9d7398a504d2c274f085a9d9851b9ebb9,DP,D126+4,Polypose (colique) juvénile
+57408ba9d7398a504d2c274f085a9d9851b9ebb9,DAS,I255,Myocardiopathie ischémique
+c2061fa42b17562efa87cb664dca97625bcc74a1,DP,F1000,"Troubles mentaux et du comportement dus à une intoxication aigüe par l'alcool, sans complication"
+f970511df74e1040f1453aa7d911a1510f7176d5,DP,R070,Douleur de la gorge
+f970511df74e1040f1453aa7d911a1510f7176d5,DAS,I10,Hypertension essentielle (primitive)
+f970511df74e1040f1453aa7d911a1510f7176d5,DAS,E8768,"Hypokaliémies, autres et sans précision"
+f970511df74e1040f1453aa7d911a1510f7176d5,DAS,G473,Apnée du sommeil
+f970511df74e1040f1453aa7d911a1510f7176d5,DAS,E559,"Carence en vitamine D, sans précision"
+f970511df74e1040f1453aa7d911a1510f7176d5,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+f970511df74e1040f1453aa7d911a1510f7176d5,DAS,E43,"Malnutrition protéino-énergétique grave, sans précision"
+f970511df74e1040f1453aa7d911a1510f7176d5,DAS,C780,Tumeur maligne secondaire du poumon
+0f39d7260363328ee0113c85268517092109a494,DP,F1007,Troubles mentaux et du comportement dus à une intoxication aigüe pathologique par l'alcool
+0f39d7260363328ee0113c85268517092109a494,DAS,I482,Fibrillation auriculaire chronique [permanente]
+0f39d7260363328ee0113c85268517092109a494,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+0f39d7260363328ee0113c85268517092109a494,DAS,E8768,"Hypokaliémies, autres et sans précision"
+0f39d7260363328ee0113c85268517092109a494,DAS,C787,Tumeur maligne secondaire du foie et des voies biliaires intrahépatiques
+0f39d7260363328ee0113c85268517092109a494,DAS,R410,"Désorientation, sans précision"
+103c6b6e1b2157ca23f9e912b2708b09c2b84035,DR,C792,Tumeur maligne secondaire de la peau
+103c6b6e1b2157ca23f9e912b2708b09c2b84035,DP,Z5101,Séance de radiothérapie
+103c6b6e1b2157ca23f9e912b2708b09c2b84035,DAS,R410,"Désorientation, sans précision"
+103c6b6e1b2157ca23f9e912b2708b09c2b84035,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+103c6b6e1b2157ca23f9e912b2708b09c2b84035,DAS,E1190,"Diabète sucré de type 2 insulinotraité, sans complication"
+103c6b6e1b2157ca23f9e912b2708b09c2b84035,DAS,C787,Tumeur maligne secondaire du foie et des voies biliaires intrahépatiques
+0fa0951d34acf158199c9962804a2ba2d115650d,DP,F10202,"Syndrome de dépendance à l'alcool, personne actuellement abstinente en rémission complète"
+0fa0951d34acf158199c9962804a2ba2d115650d,DAS,E8768,"Hypokaliémies, autres et sans précision"
+9cf9f7bda2e037196c34d8d61d1622e44ac43150,DR,C674,Tumeur maligne de la paroi postérieure de la vessie
+9cf9f7bda2e037196c34d8d61d1622e44ac43150,DP,Z511,Séance de chimiothérapie pour tumeur
+9cf9f7bda2e037196c34d8d61d1622e44ac43150,DAS,E559,"Carence en vitamine D, sans précision"
+9cf9f7bda2e037196c34d8d61d1622e44ac43150,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+ac5837f1fce69b5d21c2ed4193c95a78254f0d77,DP,F10241,"Syndrome de dépendance à l'alcool, utilisation actuelle, avec symptômes physiques"
+ac5837f1fce69b5d21c2ed4193c95a78254f0d77,DAS,G473,Apnée du sommeil
+ac5837f1fce69b5d21c2ed4193c95a78254f0d77,DAS,E1190,"Diabète sucré de type 2 insulinotraité, sans complication"
+ac5837f1fce69b5d21c2ed4193c95a78254f0d77,DAS,I10,Hypertension essentielle (primitive)
+ac5837f1fce69b5d21c2ed4193c95a78254f0d77,DAS,I255,Myocardiopathie ischémique
+e598142996f9cbc5da4cc13e8cbe1ef1182bfe8b,DP,H264,Séquelles de cataracte
+e598142996f9cbc5da4cc13e8cbe1ef1182bfe8b,DAS,E43,"Malnutrition protéino-énergétique grave, sans précision"
+e598142996f9cbc5da4cc13e8cbe1ef1182bfe8b,DAS,C795,Tumeur maligne secondaire des os et de la moelle osseuse
+e598142996f9cbc5da4cc13e8cbe1ef1182bfe8b,DAS,E8718,"Hypoosmolarités et hyponatrémies, autres et sans précision"
+e598142996f9cbc5da4cc13e8cbe1ef1182bfe8b,DAS,I10,Hypertension essentielle (primitive)
+af3946d114ad528f31814df03f66d77b7f138d61,DP,F1021,"Syndrome de dépendance à l'alcool, personne actuellement abstinente mais dans un environnement protégé"
+af3946d114ad528f31814df03f66d77b7f138d61,DAS,I255,Myocardiopathie ischémique
+af3946d114ad528f31814df03f66d77b7f138d61,DAS,C780,Tumeur maligne secondaire du poumon
+af3946d114ad528f31814df03f66d77b7f138d61,DAS,G473,Apnée du sommeil
+af3946d114ad528f31814df03f66d77b7f138d61,DAS,C787,Tumeur maligne secondaire du foie et des voies biliaires intrahépatiques
+af3946d114ad528f31814df03f66d77b7f138d61,DAS,R410,"Désorientation, sans précision"
+af3946d114ad528f31814df03f66d77b7f138d61,DAS,E559,"Carence en vitamine D, sans précision"
+27145f66ce5e5fedccb5c1d78a5ba0ac7ea4b38e,DP,F1022,"Syndrome de dépendance à l'alcool, personne suivant actuellement un régime de maintenance ou de substitution sous surveillance médicale"
+27145f66ce5e5fedccb5c1d78a5ba0ac7ea4b38e,DAS,R410,"Désorientation, sans précision"
+27145f66ce5e5fedccb5c1d78a5ba0ac7ea4b38e,DAS,G473,Apnée du sommeil
+27145f66ce5e5fedccb5c1d78a5ba0ac7ea4b38e,DAS,C795,Tumeur maligne secondaire des os et de la moelle osseuse
+27145f66ce5e5fedccb5c1d78a5ba0ac7ea4b38e,DAS,E8768,"Hypokaliémies, autres et sans précision"
+27145f66ce5e5fedccb5c1d78a5ba0ac7ea4b38e,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+27145f66ce5e5fedccb5c1d78a5ba0ac7ea4b38e,DAS,C787,Tumeur maligne secondaire du foie et des voies biliaires intrahépatiques
+6b932b51d3b3fbc4a213eab047a5b3d4c4285d72,DP,F102,Troubles mentaux et du comportement liés à l'utilisation d'alcool : syndrome de dépendance
+6b932b51d3b3fbc4a213eab047a5b3d4c4285d72,DAS,E1190,"Diabète sucré de type 2 insulinotraité, sans complication"
+6b932b51d3b3fbc4a213eab047a5b3d4c4285d72,DAS,E559,"Carence en vitamine D, sans précision"
+6b932b51d3b3fbc4a213eab047a5b3d4c4285d72,DAS,I255,Myocardiopathie ischémique
+6b932b51d3b3fbc4a213eab047a5b3d4c4285d72,DAS,C795,Tumeur maligne secondaire des os et de la moelle osseuse
+6b932b51d3b3fbc4a213eab047a5b3d4c4285d72,DAS,G473,Apnée du sommeil
+6b932b51d3b3fbc4a213eab047a5b3d4c4285d72,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+77b3e26a4aeb42641845087a94b3a4b33b53cebc,DP,I5000,"Insuffisance cardiaque congestive, avec fraction d'éjection ventriculaire gauche [FEVG] supérieure ou égale à 50"
+77b3e26a4aeb42641845087a94b3a4b33b53cebc,DAS,G473,Apnée du sommeil
+76e2ff42a6d0a1e426c4d2dc6999b9940624062c,DP,H258,Autres cataractes séniles
+76e2ff42a6d0a1e426c4d2dc6999b9940624062c,DAS,I482,Fibrillation auriculaire chronique [permanente]
+42a27b8cfbbc7a23dc9122fb30f5ce4f95af0d0b,DP,C447,"Tumeur maligne de la peau du membre inférieur, y compris la hanche"
+3d8c8536553645278f780ba3f376f3c6d973bf42,DR,C677,Tumeur maligne de l'ouraque
+3d8c8536553645278f780ba3f376f3c6d973bf42,DP,Z5101,Séance de radiothérapie
+3d8c8536553645278f780ba3f376f3c6d973bf42,DAS,R410,"Désorientation, sans précision"
+dd8a51aac5b3b4755580a39756779e58df643235,DR,C61,Tumeur maligne de la prostate
+dd8a51aac5b3b4755580a39756779e58df643235,DP,Z5101,Séance de radiothérapie
+dd8a51aac5b3b4755580a39756779e58df643235,DAS,E8768,"Hypokaliémies, autres et sans précision"
+dd8a51aac5b3b4755580a39756779e58df643235,DAS,R33,Rétention d'urine
+dd8a51aac5b3b4755580a39756779e58df643235,DAS,R410,"Désorientation, sans précision"
+32473865fe9c606eb9f53ae89db1f3afa454f29b,DP,K291,Autres gastrites aiguës
+9e78775c4ab365d788bc64ad0c977cce5377d112,DP,F104,Troubles mentaux et du comportement liés à l'utilisation d'alcool : syndrome de sevrage avec delirium
+9e78775c4ab365d788bc64ad0c977cce5377d112,DAS,E8718,"Hypoosmolarités et hyponatrémies, autres et sans précision"
+9e78775c4ab365d788bc64ad0c977cce5377d112,DAS,E8768,"Hypokaliémies, autres et sans précision"
+9e78775c4ab365d788bc64ad0c977cce5377d112,DAS,C780,Tumeur maligne secondaire du poumon
+9e78775c4ab365d788bc64ad0c977cce5377d112,DAS,E559,"Carence en vitamine D, sans précision"
+9e78775c4ab365d788bc64ad0c977cce5377d112,DAS,E1190,"Diabète sucré de type 2 insulinotraité, sans complication"
+9e78775c4ab365d788bc64ad0c977cce5377d112,DAS,I10,Hypertension essentielle (primitive)
+c231c7fe1f4c74679946ebe9fc4cc2840c5cf8b4,DP,F1030,"Syndrome de sevrage de l'alcool, sans complication"
+c231c7fe1f4c74679946ebe9fc4cc2840c5cf8b4,DAS,G473,Apnée du sommeil
+c231c7fe1f4c74679946ebe9fc4cc2840c5cf8b4,DAS,C795,Tumeur maligne secondaire des os et de la moelle osseuse
+c231c7fe1f4c74679946ebe9fc4cc2840c5cf8b4,DAS,E8718,"Hypoosmolarités et hyponatrémies, autres et sans précision"
+c231c7fe1f4c74679946ebe9fc4cc2840c5cf8b4,DAS,C780,Tumeur maligne secondaire du poumon
+c231c7fe1f4c74679946ebe9fc4cc2840c5cf8b4,DAS,R410,"Désorientation, sans précision"
+122da78bdee039e38edeef2ed9c6c9651d52ec82,DP,I253,Anévrisme du coeur
+c7d9c679417d0a42a67b416a6e596b58216e0fcc,DP,F1020,"Syndrome de dépendance à l'alcool, personne actuellement abstinente"
+c7d9c679417d0a42a67b416a6e596b58216e0fcc,DAS,E8718,"Hypoosmolarités et hyponatrémies, autres et sans précision"
+c7d9c679417d0a42a67b416a6e596b58216e0fcc,DAS,R410,"Désorientation, sans précision"
+c7d9c679417d0a42a67b416a6e596b58216e0fcc,DAS,E559,"Carence en vitamine D, sans précision"
+c7d9c679417d0a42a67b416a6e596b58216e0fcc,DAS,I482,Fibrillation auriculaire chronique [permanente]
+c7d9c679417d0a42a67b416a6e596b58216e0fcc,DAS,E43,"Malnutrition protéino-énergétique grave, sans précision"
+c7d9c679417d0a42a67b416a6e596b58216e0fcc,DAS,C780,Tumeur maligne secondaire du poumon
+070300c04b3bc52658eac5446068e6eac23a5155,DP,I482,Fibrillation auriculaire chronique [permanente]
+070300c04b3bc52658eac5446068e6eac23a5155,DAS,R33,Rétention d'urine
+070300c04b3bc52658eac5446068e6eac23a5155,DAS,C787,Tumeur maligne secondaire du foie et des voies biliaires intrahépatiques
+070300c04b3bc52658eac5446068e6eac23a5155,DAS,E8718,"Hypoosmolarités et hyponatrémies, autres et sans précision"
+070300c04b3bc52658eac5446068e6eac23a5155,DAS,R410,"Désorientation, sans précision"
+cd372bd9dfd0e15f1281bfb1496ff3dd3346e4dd,DR,C187,Tumeur maligne du côlon sigmoïde
+cd372bd9dfd0e15f1281bfb1496ff3dd3346e4dd,DP,Z5101,Séance de radiothérapie
+cd372bd9dfd0e15f1281bfb1496ff3dd3346e4dd,DAS,E1190,"Diabète sucré de type 2 insulinotraité, sans complication"
+cd372bd9dfd0e15f1281bfb1496ff3dd3346e4dd,DAS,E1198,"Diabète sucré de type 2 non insulinotraité ou sans précision, sans complication"
+cd372bd9dfd0e15f1281bfb1496ff3dd3346e4dd,DAS,E8718,"Hypoosmolarités et hyponatrémies, autres et sans précision"
+cd372bd9dfd0e15f1281bfb1496ff3dd3346e4dd,DAS,I482,Fibrillation auriculaire chronique [permanente]
+cd372bd9dfd0e15f1281bfb1496ff3dd3346e4dd,DAS,N185,"Maladie rénale chronique, stade 5"
+cd372bd9dfd0e15f1281bfb1496ff3dd3346e4dd,DAS,E43,"Malnutrition protéino-énergétique grave, sans précision"
+cd372bd9dfd0e15f1281bfb1496ff3dd3346e4dd,DAS,R410,"Désorientation, sans précision"
