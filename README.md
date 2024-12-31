@@ -1,14 +1,9 @@
-# Mistral-finetune
-
-<a target="_blank" href="https://github.com/24p11/recode-with-mistral-finetune/blob/main/tutorials/mistral_finetune_7b.ipynb">
-  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
-</a>
-
+# recode-with-mistral-finetune
 
 `mistral-finetune` is a light-weight codebase that enables memory-efficient and performant finetuning of Mistral's models.
 It is based on [LoRA](https://arxiv.org/abs/2106.09685), a training paradigm where most weights are frozen and only 1-2% of additional weights in the form of low-rank matrix perturbations are trained. 
 
-This repo is a fork of the original `mistral-finetune` ](https://arxiv.org/abs/2106.09685) adapted to the training of models dedicated to ICD-10 coding from clinical notes.
+This repo is a fork of the original [`mistral-finetune` ](https://github.com/mistralai/mistral-finetune) adapted to the training of models dedicated to ICD-10 coding from clinical notes.
 
 The purpurse of this fork is to help information medical teams to finetune Mistral model on the ICD-10 coding task (in french) with so called annotated data :
 - data = clinical notes (1 note or the concatenation of all the notes available for the patient in EMR). The restriction is that the model can only take a fixed number of token as entry.
@@ -20,42 +15,13 @@ For this finetuning a generative model we can use 2 paradigm :
 - Next token prediction : you give the model a long text, and the task is to prodict next word. For ICD-10 coding, we train the model will on a text which is the concatenation of the note and ICD-10 coding. This task will princilally help the model to learn contextualised reprensentations of medical words of the clinical note and of the of ICD-10 definitions and codes/ 
 - Instruction prediction : the model here is seen as an assistant. You give to the assistant a context (medical ICD-10 coding from clinical notes) and a question (what codes will you choose for the following clinical note), and the assistant will give a correct answer (the ICD-10 codes).
 
-## Installation
+The project contains 3 notebooks (```tutorials/```):
+- <a target="_blank" href="https://github.com/24p11/recode-with-mistral-finetune/blob/main/tutorials/generate_fictives_notes.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/> </a> generate_fictives_notes.ipynb : Some fictional sample data (annoted clinical notes with ICD-10 codes) have been generated with [Mistral AI API](https://docs.mistral.ai/api/)  
+- <a target="_blank" href="https://github.com/24p11/recode-with-mistral-finetune/blob/main/tutorials/prepare_data_for_generative_finetuning.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/> </a> prepare_data_for_generative_finetuning.ipynb : prepare data for training 
+- <a target="_blank" href="https://github.com/24p11/recode-with-mistral-finetune/blob/main/tutorials/mistral_finetune_7b.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab mistral_finetune_7b"/></a> mistral_finetune_7b.ipynb : execute training and perform eveluation with model Mistral-7B 
 
-To get started with Mistral LoRA fine-tuning, follow these steps:
-
-1. Clone this repository:
-```
-cd $HOME && git clone https://github.com/24p11/recode-with-mistral-finetune.git
-```
-
-2. Install all required dependencies:
-```
-cd mistral-finetune
-pip install -r requirements.txt
-```
-
-## Model download
-
-We recommend fine-tuning one of the 7B Instruct v3 Mistral models which you can download from the official Mistral repo :
-7B Instruct v3 | [7B Instruct v3](https://models.mistralcdn.com/mistral-7b-v0-3/mistral-7B-Instruct-v0.3.tar) 
-or from hugginface see 
-
-E.g., to download the 7B-base model you can run the following command:
-```sh
-mkdir -p ~/${HOME}/mistral_models
-cd ${HOME} && wget https://models.mistralcdn.com/mistral-7b-v0-3/mistral-7B-v0.3.tar
-tar -xf mistral-7B-v0.3.tar -C mistral_models
-```
-
-Make sure to modify your training script and add the path to the downloaded 
-folder as `model_id_or_path`.
-
-E.g., modify [example/7B.yaml](https://github.com/mistralai/mistral-finetune/blob/main/example/7B.yaml) to include the absolute path to `$HOME/mistral_models/7B`:
-
-```
-model_id_or_path: "/Users/johndoe/mistral_models/7B"
-```
 
 ## Prepare dataset 
 
@@ -125,37 +91,9 @@ For ICD-10 coding in French we have adopted the following conventions :
 }
 ```
 
-The notebook  [prepare_data_for_generative_finetuning](tutorials/prepare_data_for_generative_finetuning.ipynb) will show how to prepare data step by step. 
 
-## Customizing training configuration
-
-All the parameters of the training procedure are stored in yaml config file (see example/7B.yaml). Modify your training yaml to include the ultrachat dataset and verify the yaml
-
-The example `mistral-finetune/examples/7B` defines reasonable parameters for learning rate, weight decay, etc... but you are advised to 
-customize these settings for your use case.
-
-Generally, a training configuration should fill the following parameters:
-
-- `model_id_or_path` defines the model to start training from. This can be a path to a pre-trained model or a local model directory.
-- `run_dir` defines the directory where training checkpoints and metrics are stored.
-- `seq_len` defines the sequence length for training. This is the maximum length of input sequences the model will process. Samples are packed to reach a length of `seq_len` for maximum training efficiency.
-- `batch_size` defines the number of training examples used per GPU. **Note**: The overall effective batch_size (in tokens) across all GPUs equals `num_gpus` x `batch_size` x `seq_len`.
-- `max_steps` defines the maximum number of training steps. This is the total number of iterations the training process will run. It can be adjusted based on the specific needs of your training scenario. Total number of tokens seen during training is `max_steps` x `num_gpus` x `batch_size` x `seq_len`.
-- `optim.lr` defines the learning rate. This is the initial learning rate for the optimizer.
-- `optim.weight_decay` defines weight decay. Weight decay is a regularization technique used to prevent overfitting by penalizing large weights. We recommend leaving it at 0.1.
-- `optim.pct_start` defines the percentage of the total training steps used for the learning rate warm-up phase before it starts to decrease. It corresponds to pct_start of PyTorch's OneCycleLR.
-- `lora.rank` defines the size of the LoRA (Low-Rank Adaptation) adapters. We recommend 64 or less, which adjusts the rank of the low-rank decomposition used in LoRA.
-- `seed` defines the random seed for initialization and data shuffling/sampling. Setting a seed ensures reproducibility of results.
-- `log_freq` defines the logging frequency. This specifies how often (in steps) to log training metrics.
-- `data.instruct_data` is the path to the instruction data used for training. This field has to be filled with one or multiple data sources in the format as explained above. Each data source should either be a path to a jsonl file or a path to a directory containing jsonl files followed by a weighting to define the importance of this dataset: `<path/to/data_source>:<weight>`. E.g.: `data.instruct_data: "/path/to/data1.jsonl:5.,/path/to/data2.jsonl:1.,/path/to/dir_of_jsonls:1."`
-- `data.data` is an optional path to additional pretraining data in the format as explained above. Note that this field can be left blank.
-- `data.eval_instruct_data` is an optional path to evaluation instruction data to run cross-validation at every `eval_freq` steps. Cross-validation metrics are displayed as `loss` and `perplexity`.
-- `eval_freq` defines how often (in steps) to evaluate the model. This specifies the interval at which the model is evaluated on the validation set.
-- `no_eval` is a flag to enable or disable intermediate evaluation. Setting it to False enables periodic evaluation during training.
-- `ckpt_freq` defines how often (in steps) to save checkpoints. This specifies the interval at which the model's state is saved.
-- `save_adapters` defines whether to only save the trained LoRA checkpoints or whether the trained LoRA should directly be merged into the base model and saved. **Note**: When setting `save_adapters=False` make sure that you have enough CPU and GPU memory to save the full model on a single process (this is usually only possible for the 7B model).
-- `wandb.key` is used to pass your Weights & Biases (wandb) API key for logging. This allows you to log training metrics to the wandb dashboard.
-- `wandb.project` defines the wandb project name. This is where the training run will be logged in the wandb interface.
+ The notebook ```prepare_data_for_generative_finetuning```  will show how to prepare data step by step. <a target="_blank" href="https://github.com/24p11/recode-with-mistral-finetune/blob/main/tutorials/prepare_data_for_generative_finetuning.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/> </a>
 
 
 ## Verify dataset
@@ -198,62 +136,114 @@ Train States
 Having `max_steps` set to 500 would lead to iterating through the dataset roughly 5 times which is reasonable, but might 
 be a bit too much. A recommended setting is shown below which would only take 30min on a 8xH100 cluster.
 
+See notebook mistral_finetune_7b <a target="_blank" href="https://github.com/24p11/recode-with-mistral-finetune/blob/main/tutorials/mistral_finetune_7b.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab mistral_finetune_7b"/></a>
 
-## Start training
 
-Having followed the [dataset verification section](#verify-dataset), we can now start training.
-For faster training, we recommend setting max_steps to only 300. Make sure to define `run_dir` to your experiment folder and optionally set `wandb_project` to a Weights & Biases project for logging`, *e.g.*:
+## Training
+The train is performed with the train script with a simple command line :
 ```
-max_steps: 300
-run_dir: "/Users/johndoe/ultra_chat_test"
-wandb.project: ultra_chat
-```
-Save the training configuration and start training! Make sure to set `--nproc-per-node` to the number of available GPUs.
-
-```
-cd $HOME/mistral-finetune
-torchrun --nproc-per-node 8 --master_port $RANDOM -m train example/7B.yaml
+cd mistral-finetune
+torchrun --nproc-per-node 1 -m train example/instruct_icd_v1.yaml
 ```
 
-Training on ultra-chat should take around 30min on a 8xH100 node and the resulting weights should give an MT Bench score around 6.3.
+The notobook mistral_finetune_7b gives you a full example <a target="_blank" href="https://github.com/24p11/recode-with-mistral-finetune/blob/main/tutorials/mistral_finetune_7b.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
-Training on glaive should take around 1h on a 8xH100 node and the resulting weights should work nicely for function calling.
+All the parameters of the training procedure are stored in yaml config file (see example/7B.yaml). Modify your training yaml to include the ultrachat dataset and verify the yaml
+
+The example `mistral-finetune/examples/7B` defines reasonable parameters for learning rate, weight decay, etc... but you are advised to 
+customize these settings for your use case.
+
+Generally, a training configuration should fill the following parameters:
+
+- `model_id_or_path` defines the model to start training from. This can be a path to a pre-trained model or a local model directory.
+- `run_dir` defines the directory where training checkpoints and metrics are stored.
+- `seq_len` defines the sequence length for training. This is the maximum length of input sequences the model will process. Samples are packed to reach a length of `seq_len` for maximum training efficiency.
+- `batch_size` defines the number of training examples used per GPU. **Note**: The overall effective batch_size (in tokens) across all GPUs equals `num_gpus` x `batch_size` x `seq_len`.
+- `max_steps` defines the maximum number of training steps. This is the total number of iterations the training process will run. It can be adjusted based on the specific needs of your training scenario. Total number of tokens seen during training is `max_steps` x `num_gpus` x `batch_size` x `seq_len`.
+- `optim.lr` defines the learning rate. This is the initial learning rate for the optimizer.
+- `optim.weight_decay` defines weight decay. Weight decay is a regularization technique used to prevent overfitting by penalizing large weights. We recommend leaving it at 0.1.
+- `optim.pct_start` defines the percentage of the total training steps used for the learning rate warm-up phase before it starts to decrease. It corresponds to pct_start of PyTorch's OneCycleLR.
+- `lora.rank` defines the size of the LoRA (Low-Rank Adaptation) adapters. We recommend 64 or less, which adjusts the rank of the low-rank decomposition used in LoRA.
+- `seed` defines the random seed for initialization and data shuffling/sampling. Setting a seed ensures reproducibility of results.
+- `log_freq` defines the logging frequency. This specifies how often (in steps) to log training metrics.
+- `data.instruct_data` is the path to the instruction data used for training. This field has to be filled with one or multiple data sources in the format as explained above. Each data source should either be a path to a jsonl file or a path to a directory containing jsonl files followed by a weighting to define the importance of this dataset: `<path/to/data_source>:<weight>`. E.g.: `data.instruct_data: "/path/to/data1.jsonl:5.,/path/to/data2.jsonl:1.,/path/to/dir_of_jsonls:1."`
+- `data.data` is an optional path to additional pretraining data in the format as explained above. Note that this field can be left blank.
+- `data.eval_instruct_data` is an optional path to evaluation instruction data to run cross-validation at every `eval_freq` steps. Cross-validation metrics are displayed as `loss` and `perplexity`.
+- `eval_freq` defines how often (in steps) to evaluate the model. This specifies the interval at which the model is evaluated on the validation set.
+- `no_eval` is a flag to enable or disable intermediate evaluation. Setting it to False enables periodic evaluation during training.
+- `ckpt_freq` defines how often (in steps) to save checkpoints. This specifies the interval at which the model's state is saved.
+- `save_adapters` defines whether to only save the trained LoRA checkpoints or whether the trained LoRA should directly be merged into the base model and saved. **Note**: When setting `save_adapters=False` make sure that you have enough CPU and GPU memory to save the full model on a single process (this is usually only possible for the 7B model).
+- `wandb.key` is used to pass your Weights & Biases (wandb) API key for logging. This allows you to log training metrics to the wandb dashboard.
+- `wandb.project` defines the wandb project name. This is where the training run will be logged in the wandb interface.
 
 
 ## Inference
 
 Once your model is trained, you should try it out in inference. We recommend using [mistral-inference](https://github.com/mistralai/mistral-inference). 
 
-Make sure to have `mistral_inference` correctly installed:
+See mistral_finetune_7b gives you a full example <a target="_blank" href="https://github.com/24p11/recode-with-mistral-finetune/blob/main/tutorials/mistral_finetune_7b.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+
+## Parameters optimisation
+
+**Mixed precision**
+
+Models are mainly a dictionary of parameters (a lots 7 Billions in our example). 
+Parameters are numeric values stored in a specific format, usually numpy float32 which uses a lot of GPU memory. 
+Some other format can be used (See : [NVIDIA blog](https://developer.nvidia.com/blog/getting-immediate-speedups-with-a100-tf32/))
+
+<img src="referentials/precision.png" alt="Mixed precision"/></a>
+
+For our training, the format to use is hard coded in the ```train.py``` file, line 175
+- bflot16 and tf32 can be use with novel GPU ampere format (A100, H100)
+- float16 is use instead (with GPU V100 for example)
+
+If you have a non ampere GPU you will also need to change precision for inference (see mistral_finetune_7b.ipynb)
+
+**Learning rate**
+
+By default the training is configure to use [OneCycleLR](https://pytorch.org/docs/stable/generated/torch.optim.lr_scheduler.OneCycleLR.html) scheduler which as 2 period
+- increase : begin with LR (initial_lr) = max_lr/div_factor to reach  LR = max_lr
+- decrease : when reach  LR = max_lr decrease to  min_lr = initial_lr/final_div_factor
+Mistral recommandation for max_lr is 1.e-4.
+I have only experience long training with float16. With this format, the training is more instable and which have for consequence to increase the loos greatly, until sometimes an NA value (see annexe).
+I recommand to use the following values when training is performed with flaot16 (not implemented in the actual config file):
+- optim:
+  * lr: 1.e-5
+  * div_factor : 5
+  * final_div_factor : 10
+  * pct_start: 0.3
+
+
+**Batching strategy for training data**
+The load_dataset functions of mistral-fine, use by default a full in memory loading of the data which can cause memory errors for large dataset.
+I recommand to set to ```False``` this option in the data Args file (/finetune/data/args.py) : 
+- line 11 :  shuffle: bool = False
+- line 11 :  dynamic_chunk_fn_call: bool = False
+This wil force lazy loading, more adapted for large datasets.
+
+## Annexe :
+
+Log high LR : when LR increase, LOOS increase to nan value 
+
 ```
-pip install mistral_inference
+2024-12-19 09:24:38 (CET) - 0:03:12 - train - INFO - step: 000001 - done (%): 0.0 - loss: 1.724 - lr: 4.0e-06 - peak_alloc_mem (GB): 26.1 - alloc_mem (GB): 17.9 - words_per_second: 1167.7 - avg_words_per_second: 1167.7 - ETA: >2024-12-31 06:50:16
+2024-12-19 09:26:15 (CET) - 0:04:48 - train - INFO - step: 000002 - done (%): 0.0 - loss: 1.682 - lr: 4.0e-06 - peak_alloc_mem (GB): 27.3 - alloc_mem (GB): 17.9 - words_per_second: 1247.4 - avg_words_per_second: 1206.2 - ETA: >2024-12-30 21:43:15
+2024-12-19 09:27:53 (CET) - 0:06:27 - train - INFO - step: 000003 - done (%): 0.0 - loss: 1.667 - lr: 4.0e-06 - peak_alloc_mem (GB): 27.3 - alloc_mem (GB): 17.9 - words_per_second: 1215.3 - avg_words_per_second: 1209.3 - ETA: >2024-12-30 21:02:02
+2024-12-19 09:29:36 (CET) - 0:08:09 - train - INFO - step: 000004 - done (%): 0.0 - loss: 1.709 - lr: 4.0e-06 - peak_alloc_mem (GB): 27.3 - alloc_mem (GB): 17.9 - words_per_second: 1172.5 - avg_words_per_second: 1199.9 - ETA: >2024-12-30 23:11:39
+2024-12-19 09:31:14 (CET) - 0:09:47 - train - INFO - step: 000005 - done (%): 0.1 - loss: 1.704 - lr: 4.0e-06 - peak_alloc_mem (GB): 27.3 - alloc_mem (GB): 17.9 - words_per_second: 1224.5 - avg_words_per_second: 1204.7 - ETA: >2024-12-30 22:04:34
+
+...
+
+2024-12-20 01:06:01 (CET) - 15:44:35 - train - INFO - step: 000566 - done (%): 5.7 - loss: 8.025 - lr: 1.0e-04 - peak_alloc_mem (GB): 27.3 - alloc_mem (GB): 17.9 - words_per_second: 1207.7 - avg_words_per_second: 1201.9 - ETA: >2024-12-30 22:44:40
+2024-12-20 01:07:40 (CET) - 15:46:13 - train - INFO - step: 000567 - done (%): 5.7 - loss: 7.902 - lr: 1.0e-04 - peak_alloc_mem (GB): 27.3 - alloc_mem (GB): 17.9 - words_per_second: 1217.9 - avg_words_per_second: 1201.9 - ETA: >2024-12-30 22:44:16
+2024-12-20 01:09:14 (CET) - 15:47:47 - train - INFO - step: 000568 - done (%): 5.7 - loss: 7.935 - lr: 1.0e-04 - peak_alloc_mem (GB): 27.3 - alloc_mem (GB): 17.9 - words_per_second: 1278.4 - avg_words_per_second: 1202.0 - ETA: >2024-12-30 22:42:31
+2024-12-20 01:10:48 (CET) - 15:49:21 - train - INFO - step: 000569 - done (%): 5.7 - loss: 8.132 - lr: 1.0e-04 - peak_alloc_mem (GB): 27.3 - alloc_mem (GB): 17.9 - words_per_second: 1277.2 - avg_words_per_second: 1202.2 - ETA: >2024-12-30 22:40:48
+2024-12-20 01:12:27 (CET) - 15:51:01 - train - INFO - step: 000570 - done (%): 5.7 - loss: nan - lr: 1.0e-04 - peak_alloc_mem (GB): 27.3 - alloc_mem (GB): 17.9 - words_per_second: 1202.5 - avg_words_per_second: 1202.2 - ETA: >2024-12-30 22:40:48
+2024-12-20 01:14:01 (CET) - 15:52:35 - train - INFO - step: 000571 - done (%): 5.7 - loss: nan - lr: 1.0e-04 - peak_alloc_mem (GB): 27.3 - alloc_mem (GB): 17.9 - words_per_second: 1277.0 - avg_words_per_second: 1202.3 - ETA: >2024-12-30 22:39:05
 ```
-
-Assuming your `lora.safetensors` is saved under `$HOME/ultra_chat_test/checkpoints/checkpoint_000300/consolidated/lora.safetensors`, you can chat with the model using `mistral_inference`, *e.g.*:
-
-```sh
-mistral-chat /mnt/slow/runs/patrick/mistral-finetune/7B/ --max_tokens 256 --temperature 1.0 --instruct --lora_path $HOME/ultra_chat_test/checkpoints/checkpoint_000300/consolidated/lora.safetensors
+which have for consequence to broke the network... predictions after this training experience
 ```
-
-## Model extension
-
-**Important**: Note that one can only fine-tune mistral models that are compatible with the v3 tokenizer which entails that the models have a vocabulary size of 32768 - not 32000. One can however easily extend older version of vocabulary size 32000 to have a vocabulary size of 32768 by using:
+Résultats de la prédiction pour le CRH:
+ ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇
 ```
-python -m utils.extend_model_vocab --original_model_ckpt /folder/to/old/model --extended_model_ckpt /folder/to/extended/model
-```
-
-Once the extension has worked, one can fine-tune using the newly created model checkpoint in `/folder/to/extended/model`.
-
-## FAQ:
-
-> - What's the best practice of fine-tuning MoEs?
-
-We see a higher degree of performance variance in when fine-tuning MoE models. It's not unusual to find that fine-tuning MoE models with different seeds can lead to a high variance in performance. We did not observe such a high variance with dense models. Therefore, we suggest running multiple instances of the same fine-tuning process on MoEs models and selecting the one that performs best.
-
-> - How can I determine the number of tokens used during the model training process?
-  
-You can use the following script to find out: https://github.com/mistralai/mistral-finetune/blob/main/utils/validate_data.py. This script accepts a .yaml training file as input and returns the number of tokens the model is being trained on.
-
-> - What should I do if I encounter a CUDA out-of-memory error?
-  
-One possible solution is to reduce the batch size per GPU. The batch size is equal to `seq_len` x `batch_size`. Try setting `batch_size` to 1 and reduce `seq_len`. You can define the `batch_size` and `seq_len` in the .yaml file.
+see also : https://www.reddit.com/r/LocalLLaMA/comments/17dcyvg/is_this_loss_normal_qloramistral/

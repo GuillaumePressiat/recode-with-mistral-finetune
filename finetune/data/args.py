@@ -8,7 +8,7 @@ logger = logging.getLogger("data")
 
 @dataclass()
 class InstructArgs(Serializable):
-    shuffle: bool = True
+    shuffle: bool = False # RF Default Mistral = True
 
     # For function calling training examples only the last tool call
     # of the assistant message can be used for training. Therefore,
@@ -27,7 +27,7 @@ class InstructArgs(Serializable):
     #   UserMessage_2, AssistantToolCallMessage_2, ToolMessage_2, AssistantMessage_2
     # ]]
     # NOTE: Only if your data is already pre-chunked should this argument be set to False
-    dynamic_chunk_fn_call: bool = True
+    dynamic_chunk_fn_call: bool = False  # RF Default Mistral = True
 
 
 @dataclass()
