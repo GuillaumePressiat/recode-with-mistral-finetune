@@ -172,7 +172,7 @@ def _train(
 
     # 8. Load model
     # Define mixed precision
-    param_dtype = torch.bfloat16
+    param_dtype = torch.bfloat16  #### Change here if you have a non ampere GPu (like V100) --> float16
     optim_dtype = torch.float32
 
     assert args.lora is not None, "`args.lora` should be set to a valid value."

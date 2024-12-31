@@ -16,6 +16,8 @@ class OptimArgs(Serializable):
     lr: float = 1e-4
     weight_decay: float = 0.1
     pct_start: float = 0.05
+    div_factor: float=25.0  # add by RF, default Pytorch arg. Change parameter to get lowder LR in config file
+    final_div_factor: float=10000.0  # add by RF, default Pytorch arg. Change parameter to get lowder LR in config file
 
 
 @dataclass
