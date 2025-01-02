@@ -3,7 +3,7 @@
 `mistral-finetune` is a light-weight codebase that enables memory-efficient and performant finetuning of Mistral's models.
 It is based on [LoRA](https://arxiv.org/abs/2106.09685), a training paradigm where most weights are frozen and only 1-2% of additional weights in the form of low-rank matrix perturbations are trained. 
 
-This repo is a fork of the original [`mistral-finetune` ](https://github.com/mistralai/mistral-finetune) adapted to the training of models dedicated to ICD-10 coding from clinical notes.
+This repo is a fork of the original [`mistral-finetune` ](https://github.com/mistralai/mistral-finetune) adapted to the training of models dedicated to ICD-10 coding from clinical notes. 
 
 The purpurse of this fork is to help information medical teams to finetune Mistral model on the ICD-10 coding task (in french) with so called annotated data :
 - data = clinical notes (1 note or the concatenation of all the notes available for the patient in EMR). The restriction is that the model can only take a fixed number of token as entry.
@@ -17,11 +17,12 @@ For this finetuning a generative model we can use 2 paradigm :
 
 The project contains 3 notebooks (```tutorials/```):
 - <a target="_blank" href="https://github.com/24p11/recode-with-mistral-finetune/blob/main/tutorials/generate_fictives_notes.ipynb">
-  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/> </a> generate_fictives_notes.ipynb : Some fictional sample data (annoted clinical notes with ICD-10 codes) have been generated with [Mistral AI API](https://docs.mistral.ai/api/)  
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/> </a> generate_fictives_notes.ipynb : Some fictional sample data (annoted clinical notes with ICD-10 codes) have been generated with [Mistral AI API](https://docs.mistral.ai/api/). 
 - <a target="_blank" href="https://github.com/24p11/recode-with-mistral-finetune/blob/main/tutorials/prepare_data_for_generative_finetuning.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/> </a> prepare_data_for_generative_finetuning.ipynb : prepare data for training 
 - <a target="_blank" href="https://github.com/24p11/recode-with-mistral-finetune/blob/main/tutorials/mistral_finetune_7b.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab mistral_finetune_7b"/></a> mistral_finetune_7b.ipynb : execute training and perform eveluation with model Mistral-7B 
 
+Fictional data are available in dir ```sample_data/```, so you can test the code on Colab or on your own infra. 
 
 ## Prepare dataset 
 
@@ -205,8 +206,10 @@ By default the training is configure to use [OneCycleLR](https://pytorch.org/doc
 - increase : begin with LR (initial_lr) = max_lr/div_factor to reach  LR = max_lr
 - decrease : when reach  LR = max_lr decrease to  min_lr = initial_lr/final_div_factor
 Mistral recommandation for max_lr is 1.e-4.
-I have only experience long training with float16. With this format, the training is more instable and which have for consequence to increase the loos greatly, until sometimes an NA value (see annexe).
+I have only experience long training with float16. With this format, the training is more instable and which have for consequence to increase the loos greatly, until sometimes an NA value (see experiments logs [logs_RF-Finetune_M7B-v0.3_12_2024.md](experiments/logs_RF-Finetune_M7B-v0.3_12_2024.md)).
+
 I recommand to use the following values when training is performed with flaot16 (not implemented in the actual config file):
+
 - optim:
   * lr: 1.e-5
   * div_factor : 5
@@ -221,29 +224,6 @@ I recommand to set to ```False``` this option in the data Args file (/finetune/d
 - line 11 :  dynamic_chunk_fn_call: bool = False
 This wil force lazy loading, more adapted for large datasets.
 
-## Annexe :
+## Share tricks and results
 
-Log high LR : when LR increase, LOOS increase to nan value 
-
-```
-2024-12-19 09:24:38 (CET) - 0:03:12 - train - INFO - step: 000001 - done (%): 0.0 - loss: 1.724 - lr: 4.0e-06 - peak_alloc_mem (GB): 26.1 - alloc_mem (GB): 17.9 - words_per_second: 1167.7 - avg_words_per_second: 1167.7 - ETA: >2024-12-31 06:50:16
-2024-12-19 09:26:15 (CET) - 0:04:48 - train - INFO - step: 000002 - done (%): 0.0 - loss: 1.682 - lr: 4.0e-06 - peak_alloc_mem (GB): 27.3 - alloc_mem (GB): 17.9 - words_per_second: 1247.4 - avg_words_per_second: 1206.2 - ETA: >2024-12-30 21:43:15
-2024-12-19 09:27:53 (CET) - 0:06:27 - train - INFO - step: 000003 - done (%): 0.0 - loss: 1.667 - lr: 4.0e-06 - peak_alloc_mem (GB): 27.3 - alloc_mem (GB): 17.9 - words_per_second: 1215.3 - avg_words_per_second: 1209.3 - ETA: >2024-12-30 21:02:02
-2024-12-19 09:29:36 (CET) - 0:08:09 - train - INFO - step: 000004 - done (%): 0.0 - loss: 1.709 - lr: 4.0e-06 - peak_alloc_mem (GB): 27.3 - alloc_mem (GB): 17.9 - words_per_second: 1172.5 - avg_words_per_second: 1199.9 - ETA: >2024-12-30 23:11:39
-2024-12-19 09:31:14 (CET) - 0:09:47 - train - INFO - step: 000005 - done (%): 0.1 - loss: 1.704 - lr: 4.0e-06 - peak_alloc_mem (GB): 27.3 - alloc_mem (GB): 17.9 - words_per_second: 1224.5 - avg_words_per_second: 1204.7 - ETA: >2024-12-30 22:04:34
-
-...
-
-2024-12-20 01:06:01 (CET) - 15:44:35 - train - INFO - step: 000566 - done (%): 5.7 - loss: 8.025 - lr: 1.0e-04 - peak_alloc_mem (GB): 27.3 - alloc_mem (GB): 17.9 - words_per_second: 1207.7 - avg_words_per_second: 1201.9 - ETA: >2024-12-30 22:44:40
-2024-12-20 01:07:40 (CET) - 15:46:13 - train - INFO - step: 000567 - done (%): 5.7 - loss: 7.902 - lr: 1.0e-04 - peak_alloc_mem (GB): 27.3 - alloc_mem (GB): 17.9 - words_per_second: 1217.9 - avg_words_per_second: 1201.9 - ETA: >2024-12-30 22:44:16
-2024-12-20 01:09:14 (CET) - 15:47:47 - train - INFO - step: 000568 - done (%): 5.7 - loss: 7.935 - lr: 1.0e-04 - peak_alloc_mem (GB): 27.3 - alloc_mem (GB): 17.9 - words_per_second: 1278.4 - avg_words_per_second: 1202.0 - ETA: >2024-12-30 22:42:31
-2024-12-20 01:10:48 (CET) - 15:49:21 - train - INFO - step: 000569 - done (%): 5.7 - loss: 8.132 - lr: 1.0e-04 - peak_alloc_mem (GB): 27.3 - alloc_mem (GB): 17.9 - words_per_second: 1277.2 - avg_words_per_second: 1202.2 - ETA: >2024-12-30 22:40:48
-2024-12-20 01:12:27 (CET) - 15:51:01 - train - INFO - step: 000570 - done (%): 5.7 - loss: nan - lr: 1.0e-04 - peak_alloc_mem (GB): 27.3 - alloc_mem (GB): 17.9 - words_per_second: 1202.5 - avg_words_per_second: 1202.2 - ETA: >2024-12-30 22:40:48
-2024-12-20 01:14:01 (CET) - 15:52:35 - train - INFO - step: 000571 - done (%): 5.7 - loss: nan - lr: 1.0e-04 - peak_alloc_mem (GB): 27.3 - alloc_mem (GB): 17.9 - words_per_second: 1277.0 - avg_words_per_second: 1202.3 - ETA: >2024-12-30 22:39:05
-```
-which have for consequence to broke the network... predictions after this training experience
-```
-Résultats de la prédiction pour le CRH:
- ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇  ⁇
-```
-see also : https://www.reddit.com/r/LocalLLaMA/comments/17dcyvg/is_this_loss_normal_qloramistral/
+In the folder experiments you can sahre logs of your experiments and some comments on yours results.
