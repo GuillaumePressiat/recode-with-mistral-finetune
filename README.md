@@ -192,7 +192,7 @@ Models are mainly a dictionary of parameters (a lots 7 Billions in our example).
 Parameters are numeric values stored in a specific format, usually numpy float32 which uses a lot of GPU memory. 
 Some other format can be used (See : [NVIDIA blog](https://developer.nvidia.com/blog/getting-immediate-speedups-with-a100-tf32/))
 
-<img src="referentials/precision.png" alt="Mixed precision"/></a>
+<img src="images/precision.png" alt="Mixed precision"/></a>
 
 For our training, the format to use is hard coded in the ```train.py``` file, line 175
 - bflot16 and tf32 can be use with novel GPU ampere format (A100, H100)
@@ -218,12 +218,27 @@ I recommand to use the following values when training is performed with flaot16 
 
 
 **Batching strategy for training data**
+
 The load_dataset functions of mistral-fine, use by default a full in memory loading of the data which can cause memory errors for large dataset.
 I recommand to set to ```False``` this option in the data Args file (/finetune/data/args.py) : 
 - line 11 :  shuffle: bool = False
 - line 11 :  dynamic_chunk_fn_call: bool = False
 This wil force lazy loading, more adapted for large datasets.
 
+**LoRA**
+
+Mistral-finetuning library uses the LoRA, a technique that accelerates the fine-tuning of large models while consuming less memory.
+
+<img src="images/lora_diagram.png" alt="Mixed precision"/></a>
+
+See [Lora Hugginface blog post](https://huggingface.co/docs/peft/main/conceptual_guides/lora)
+
+The consequence is that there are 2 possible behaviour for saving the finetuned model  (checkpointing):
+- Save LoRA matrices (the left side of the figure above)
+- Merge LoRA matrices with the intial model to save a new model like (left side of the figure)
+
+This behaviour is controled by the ```save_adapters``` arguments (see above). For testing the procedure the first choice is possible, but to learn a model you intend to use in production, it should be better to build a full autonomus model.
+
 ## Share tricks and results
 
-In the folder experiments you can sahre logs of your experiments and some comments on yours results.
+In the folder [experiments](experiments/) you can sahre logs of your experiments and some comments on yours results.
