@@ -4,9 +4,11 @@ Test Mistral 7B
 - MICROBACTH :8 (1 STEP = 8 encounters)
 - SEQ LENGTH : 15000
 
-Statistics :
+Comments :
 - Time per step : 1/2 min
 - when LR increase, LOOS increase to nan value. see also : https://www.reddit.com/r/LocalLLaMA/comments/17dcyvg/is_this_loss_normal_qloramistral/
+- Finaly this destroy the model which became not usable (see below)
+
 ```
 2024-12-19 09:21:51 (CET) - 0:00:25 - train - INFO - TrainArgs: {'batch_size': 1,
  'checkpoint': True,
