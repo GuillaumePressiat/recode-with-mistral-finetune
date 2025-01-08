@@ -12,4 +12,5 @@ xformers==0.0.24
 
 pandas>=2.0
 mistralai
+huggingface_hub
 
